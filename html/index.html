@@ -82,9 +82,6 @@
                 <!-- /Mobile Menu Toggle -->
                 <!-- Header Right Menu -->
                 <ul class="nav user-menu">
-                    <!-- Flag -->
-
-                    <!-- /Flag -->
                     <!-- Notifications -->
                     <li class="nav-item dropdown">
                         <a href="#" class="nav-link notifications-item">
@@ -92,6 +89,7 @@
                             <span class="badge badge-pill">3</span>
                         </a>
                     </li>
+
                     <!-- /Notifications -->
                     <!-- Chat -->
                     <li class="nav-item dropdown">
@@ -119,6 +117,9 @@
                             <a class="dropdown-item" href="profile.html"
                                 ><i class="feather-user"></i> My Profile</a
                             >
+                            <a class="dropdown-item" href="settings.html">
+                                <i class="feather-settings"></i>Settings
+                            </a>
                             <a class="dropdown-item" href="login.html"
                                 ><i class="feather-power"></i> Logout</a
                             >
@@ -144,53 +145,11 @@
                                 >
                             </li>
                             <li class="submenu">
-                                <a href="#"
+                                <a href="patients.html"
                                     ><i class="feather-user"></i>
                                     <span>Patients</span>
                                     <span class="menu-arrow"></span
                                 ></a>
-                                <ul style="display: none">
-                                    <li>
-                                        <a href="patients.html"
-                                            >Patients List</a
-                                        >
-                                    </li>
-                                    <li>
-                                        <a href="patients-profile.html"
-                                            >Patient Profile</a
-                                        >
-                                    </li>
-                                    <li>
-                                        <a href="patients-history.html"
-                                            >History</a
-                                        >
-                                    </li>
-                                    <li>
-                                        <a href="patients-report.html"
-                                            >Report</a
-                                        >
-                                    </li>
-                                    <li>
-                                        <a href="patients-documents.html"
-                                            >Documents</a
-                                        >
-                                    </li>
-                                    <li>
-                                        <a href="patients-transactions.html"
-                                            >Transactions</a
-                                        >
-                                    </li>
-                                    <li>
-                                        <a href="patients-issues.html"
-                                            >Issues</a
-                                        >
-                                    </li>
-                                    <li>
-                                        <a href="patients-data.html"
-                                            >External Data</a
-                                        >
-                                    </li>
-                                </ul>
                             </li>
                             <li>
                                 <a href="appointments.html"
@@ -201,18 +160,7 @@
                                     ></a
                                 >
                             </li>
-                            <li>
-                                <a href="flow-board.html"
-                                    ><i class="feather-bar-chart"></i>
-                                    <span>Flow Board</span></a
-                                >
-                            </li>
-                            <li>
-                                <a href="recall-board.html"
-                                    ><i class="feather-calendar"></i>
-                                    <span>Recall Board</span></a
-                                >
-                            </li>
+
                             <li>
                                 <a href="chat.html"
                                     ><i class="feather-message-circle"></i>
@@ -222,25 +170,7 @@
                                     ></a
                                 >
                             </li>
-                            <li class="submenu">
-                                <a href="#"
-                                    ><i class="feather-disc"></i>
-                                    <span> Procedures</span>
-                                    <span class="menu-arrow"></span
-                                ></a>
-                                <ul style="display: none">
-                                    <li>
-                                        <a href="electronics-report.html"
-                                            >Electronics Reports</a
-                                        >
-                                    </li>
-                                    <li>
-                                        <a href="lab-documents.html"
-                                            >Lab Documents</a
-                                        >
-                                    </li>
-                                </ul>
-                            </li>
+
                             <li class="submenu">
                                 <a href="javascript:void(0);"
                                     ><i class="feather-book"></i>
@@ -400,12 +330,7 @@
                                     </li>
                                 </ul>
                             </li>
-                            <li>
-                                <a href="settings.html"
-                                    ><i class="feather-settings"></i>
-                                    <span>Settings</span></a
-                                >
-                            </li>
+
                             <li class="submenu">
                                 <a href="#"
                                     ><i class="feather-grid"></i>
@@ -790,167 +715,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="row calender-col">
-                        <div class="col-xl-8">
-                            <div class="card">
-                                <div class="card-header no-border">
-                                    <h4 class="card-title">
-                                        Medicine Requests
-                                    </h4>
-                                </div>
-                                <div class="card-body">
-                                    <div class="table-responsive">
-                                        <table class="table mb-0">
-                                            <thead>
-                                                <tr>
-                                                    <th>Medicine</th>
-                                                    <th>Count</th>
-                                                    <th>Priority</th>
-                                                    <th>Time</th>
-                                                    <th>Status</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td>Desmopressin tabs`</td>
-                                                    <td>200 strips</td>
-                                                    <td>
-                                                        <span
-                                                            class="
-                                                                badge
-                                                                bg-warning-light
-                                                            "
-                                                            >Urgent</span
-                                                        >
-                                                    </td>
-                                                    <td>10 mins ago</td>
-                                                    <td class="text-warning">
-                                                        Pending Approval
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Abciximab-injection</td>
-                                                    <td>50 nos</td>
-                                                    <td>
-                                                        <span
-                                                            class="
-                                                                badge
-                                                                bg-info-light
-                                                            "
-                                                            >Next Week</span
-                                                        >
-                                                    </td>
-                                                    <td>5 days ago</td>
-                                                    <td class="text-success">
-                                                        On Time
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>
-                                                        Paliperidone palmitate
-                                                    </td>
-                                                    <td>75 Strips</td>
-                                                    <td>
-                                                        <span
-                                                            class="
-                                                                badge
-                                                                bg-info-light
-                                                            "
-                                                            >Next Week</span
-                                                        >
-                                                    </td>
-                                                    <td>1 Day Ago</td>
-                                                    <td class="text-danger">
-                                                        Delay
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>
-                                                        Sermorelin-injectable
-                                                    </td>
-                                                    <td>22 nos</td>
-                                                    <td>
-                                                        <span
-                                                            class="
-                                                                badge
-                                                                bg-warning-light
-                                                            "
-                                                            >Urgent</span
-                                                        >
-                                                    </td>
-                                                    <td>8 mins ago</td>
-                                                    <td class="text-warning">
-                                                        Pending Approval
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Abciximab-injection</td>
-                                                    <td>10 nos</td>
-                                                    <td>
-                                                        <span
-                                                            class="
-                                                                badge
-                                                                bg-info-light
-                                                            "
-                                                            >Next Week</span
-                                                        >
-                                                    </td>
-                                                    <td>2 days ago</td>
-                                                    <td class="text-danger">
-                                                        Delay
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Kevzara sarilumab</td>
-                                                    <td>35 Strips</td>
-                                                    <td>
-                                                        <span
-                                                            class="
-                                                                badge
-                                                                bg-warning-light
-                                                            "
-                                                            >Urgent</span
-                                                        >
-                                                    </td>
-                                                    <td>5 mins ago</td>
-                                                    <td class="text-warning">
-                                                        Pending Approval
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Desmopressin</td>
-                                                    <td>155 Strips</td>
-                                                    <td>
-                                                        <span
-                                                            class="
-                                                                badge
-                                                                bg-info-light
-                                                            "
-                                                            >Next Week</span
-                                                        >
-                                                    </td>
-                                                    <td>1 days ago</td>
-                                                    <td class="text-success">
-                                                        On Time
-                                                    </td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-4">
-                            <div class="card">
-                                <div class="card-header">
-                                    <h4 class="card-title">Reviews Score</h4>
-                                </div>
-                                <div class="card-body">
-                                    <div id="dsh_chart_ex_pie"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+
                     <div class="card">
                         <div class="card-header no-border">
                             <h4 class="card-title float-left">
