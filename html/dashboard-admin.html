@@ -28,6 +28,12 @@
             href="assets/plugins/fontawesome/css/all.min.css"
         />
 
+        <!-- calendar CSS -->
+        <link
+            rel="stylesheet"
+            href="assets/plugins/simple-calendar/simple-calendar.css"
+        />
+
         <!-- Feathericon CSS -->
         <link rel="stylesheet" href="assets/css/feather.css" />
 
@@ -76,9 +82,6 @@
                 <!-- /Mobile Menu Toggle -->
                 <!-- Header Right Menu -->
                 <ul class="nav user-menu">
-                    <!-- Flag -->
-
-                    <!-- /Flag -->
                     <!-- Notifications -->
                     <li class="nav-item dropdown">
                         <a href="#" class="nav-link notifications-item">
@@ -86,6 +89,7 @@
                             <span class="badge badge-pill">3</span>
                         </a>
                     </li>
+
                     <!-- /Notifications -->
                     <!-- Chat -->
                     <li class="nav-item dropdown">
@@ -126,8 +130,9 @@
                                 class="dropdown-item"
                                 href="dashboard-admin.html"
                             >
-                                <i class="fas fa-user-cog"></i>Admins View
+                                <i class="fas fa-user-md"></i>Doctors View
                             </a>
+
                             <a class="dropdown-item" href="index.html"
                                 ><i class="feather-power"></i> Logout</a
                             >
@@ -144,10 +149,18 @@
                     <div id="sidebar-menu" class="sidebar-menu">
                         <ul>
                             <li class="menu-title"><span>Main</span></li>
-                            <li>
+                            <li class="active">
                                 <a href="dashboard.html"
                                     ><i class="feather-home"></i
+                                    ><span class="shape1"></span
+                                    ><span class="shape2"></span
                                     ><span>Dashboard</span></a
+                                >
+                            </li>
+                            <li>
+                                <a href="patients.html"
+                                    ><i class="fas fa-user-md"></i>
+                                    <span>Doctors</span></a
                                 >
                             </li>
                             <li>
@@ -183,6 +196,12 @@
                             </li>
 
                             <li>
+                                <a href="calendar.html"
+                                    ><i class="feather-calendar"></i>
+                                    <span>Calendar</span>
+                                </a>
+                            </li>
+                            <li>
                                 <a href="chat.html"
                                     ><i class="feather-message-circle"></i>
                                     <span>Messages</span
@@ -190,179 +209,6 @@
                                         >4</span
                                     ></a
                                 >
-                            </li>
-
-                            <li class="submenu active">
-                                <a href="javascript:void(0);"
-                                    ><i class="feather-book"></i
-                                    ><span class="shape1"></span
-                                    ><span class="shape2"></span>
-                                    <span>Reports</span>
-                                    <span class="menu-arrow"></span
-                                ></a>
-                                <ul style="display: none">
-                                    <li class="submenu">
-                                        <a href="javascript:void(0);">
-                                            <span>Clients</span>
-                                            <span class="menu-arrow"></span
-                                        ></a>
-                                        <ul style="display: none">
-                                            <li>
-                                                <a href="client-list.html"
-                                                    ><span>List</span></a
-                                                >
-                                            </li>
-                                            <li>
-                                                <a href="client-rx.html">
-                                                    <span>RX</span></a
-                                                >
-                                            </li>
-                                            <li>
-                                                <a href="patient-list.html">
-                                                    <span
-                                                        >Patient List
-                                                        Creation</span
-                                                    ></a
-                                                >
-                                            </li>
-                                            <li>
-                                                <a href="clinical-report.html">
-                                                    <span>Clinical</span></a
-                                                >
-                                            </li>
-                                            <li>
-                                                <a href="referals-report.html">
-                                                    <span>Reference</span></a
-                                                >
-                                            </li>
-                                            <li>
-                                                <a
-                                                    href="immunization-registry.html"
-                                                >
-                                                    <span
-                                                        >Immunization
-                                                        Registry</span
-                                                    ></a
-                                                >
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li class="submenu">
-                                        <a
-                                            href="javascript:void(0);"
-                                            class="active"
-                                        >
-                                            <span>Clinics</span>
-                                            <span class="menu-arrow"></span
-                                        ></a>
-                                        <ul style="display: none">
-                                            <li>
-                                                <a href="report-results.html"
-                                                    ><span
-                                                        >Report Results</span
-                                                    ></a
-                                                >
-                                            </li>
-                                            <li>
-                                                <a
-                                                    href="standard-measures.html"
-                                                    class="active"
-                                                >
-                                                    <span
-                                                        >Standard Measures</span
-                                                    ></a
-                                                >
-                                            </li>
-                                            <li>
-                                                <a href="quality-measures.html">
-                                                    <span
-                                                        >Quality Measures
-                                                        (CQM)</span
-                                                    ></a
-                                                >
-                                            </li>
-                                            <li>
-                                                <a
-                                                    href="automated-measures.html"
-                                                >
-                                                    <span
-                                                        >Automated Measures
-                                                        (AMC)</span
-                                                    ></a
-                                                >
-                                            </li>
-                                            <li>
-                                                <a href="amc-tracking.html">
-                                                    <span>AMC Tracking</span></a
-                                                >
-                                            </li>
-                                            <li>
-                                                <a href="alert-log.html">
-                                                    <span>Alerts Log</span></a
-                                                >
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li class="submenu">
-                                        <a href="javascript:void(0);">
-                                            <span>Visits</span>
-                                            <span class="menu-arrow"></span
-                                        ></a>
-                                        <ul style="display: none">
-                                            <li>
-                                                <a
-                                                    href="appointments-visit.html"
-                                                    ><span
-                                                        >Appointments</span
-                                                    ></a
-                                                >
-                                            </li>
-                                            <li>
-                                                <a
-                                                    href="flow-board-record.html"
-                                                >
-                                                    <span
-                                                        >Patient Flow
-                                                        Board</span
-                                                    ></a
-                                                >
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li class="submenu">
-                                        <a href="javascript:void(0);">
-                                            <span>Procedure</span>
-                                            <span class="menu-arrow"></span
-                                        ></a>
-                                        <ul style="display: none">
-                                            <li>
-                                                <a href="pending-orders.html"
-                                                    ><span>Pending Res</span></a
-                                                >
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li class="submenu">
-                                        <a href="javascript:void(0);">
-                                            <span>Insurance</span>
-                                            <span class="menu-arrow"></span
-                                        ></a>
-                                        <ul style="display: none">
-                                            <li>
-                                                <a href="unique-insurance.html"
-                                                    ><span>Unique SP</span></a
-                                                >
-                                            </li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </li>
-
-                            <li>
-                                <a href="calendar.html"
-                                    ><i class="feather-calendar"></i>
-                                    <span>Calendar</span>
-                                </a>
                             </li>
                         </ul>
                     </div>
@@ -373,190 +219,276 @@
             <!-- Page Wrapper -->
             <div class="page-wrapper">
                 <div class="content container-fluid">
-                    <!-- Page Header -->
-                    <div class="page-header">
-                        <div class="row align-items-center">
-                            <div class="col-md-12">
-                                <div class="d-flex align-items-center">
-                                    <h5 class="page-title">Dashboard</h5>
-                                    <ul class="breadcrumb ml-2">
-                                        <li class="breadcrumb-item">
-                                            <a href="dashboard.html"
-                                                ><i class="fas fa-home"></i
-                                            ></a>
-                                        </li>
-                                        <li class="breadcrumb-item">
-                                            <a href="dashboard.html"
-                                                >Dashboard</a
+                    <div class="row">
+                        <div class="col-12 col-md-6 col-lg-3 d-flex flex-wrap">
+                            <div class="card detail-box1 details-box">
+                                <div class="card-body">
+                                    <div class="dash-contetnt">
+                                        <div class="mb-3">
+                                            <img
+                                                src="assets/img/icons/accident.svg"
+                                                alt=""
+                                                width="26"
+                                            />
+                                        </div>
+                                        <h4 class="text-white">
+                                            Total Patients
+                                        </h4>
+                                        <h2 class="text-white">245</h2>
+                                        <div class="growth-indicator">
+                                            <span class="text-white"
+                                                ><i
+                                                    class="
+                                                        fas
+                                                        fa-angle-double-up
+                                                        mr-1
+                                                    "
+                                                ></i>
+                                                (14.25%)</span
                                             >
-                                        </li>
-                                        <li class="breadcrumb-item active">
-                                            Standard Measures
-                                        </li>
-                                    </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-3 d-flex flex-wrap">
+                            <div class="card detail-box2 details-box">
+                                <div class="card-body">
+                                    <div class="dash-contetnt">
+                                        <div class="mb-3">
+                                            <img
+                                                src="assets/img/icons/visits.svg"
+                                                alt=""
+                                                width="26"
+                                            />
+                                        </div>
+                                        <h4 class="text-white">
+                                            Patients Visit
+                                        </h4>
+                                        <h2 class="text-white">137</h2>
+                                        <div class="growth-indicator">
+                                            <span class="text-white"
+                                                ><i
+                                                    class="
+                                                        fas
+                                                        fa-angle-double-down
+                                                        mr-1
+                                                    "
+                                                ></i>
+                                                (4.78%)</span
+                                            >
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-3 d-flex flex-wrap">
+                            <div class="card detail-box3 details-box">
+                                <div class="card-body">
+                                    <div class="dash-contetnt">
+                                        <div class="mb-3">
+                                            <img
+                                                src="assets/img/icons/hospital-bed.svg"
+                                                alt=""
+                                                width="26"
+                                            />
+                                        </div>
+                                        <h4 class="text-white">
+                                            Total Doctors
+                                        </h4>
+                                        <h2 class="text-white">124</h2>
+                                        <div class="growth-indicator">
+                                            <span class="text-white"
+                                                ><i
+                                                    class="
+                                                        fas
+                                                        fa-angle-double-up
+                                                        mr-1
+                                                    "
+                                                ></i>
+                                                (18.32%)</span
+                                            >
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-3 d-flex flex-wrap">
+                            <div class="card detail-box4 details-box">
+                                <div class="card-body">
+                                    <div class="dash-contetnt">
+                                        <div class="mb-3">
+                                            <img
+                                                src="assets/img/icons/operating.svg"
+                                                alt=""
+                                                width="26"
+                                            />
+                                        </div>
+                                        <h4 class="text-white">Operations</h4>
+                                        <h2 class="text-white">05</h2>
+                                        <div class="growth-indicator">
+                                            <span class="text-white"
+                                                ><i
+                                                    class="
+                                                        fas
+                                                        fa-angle-double-down
+                                                        mr-1
+                                                    "
+                                                ></i>
+                                                (25.14%)</span
+                                            >
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <!-- /Page Header -->
-                    <div class="row">
-                        <div class="col-sm-12">
+                    <div class="row calender-col">
+                        <div class="col-xl-4">
                             <div class="card">
+                                <div class="card-header">
+                                    <h4 class="card-title">Schedule</h4>
+                                </div>
+                                <div class="card-body">
+                                    <div
+                                        id="calendar-doctor"
+                                        class="calendar-container"
+                                    ></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 d-flex flex-wrap">
+                            <div class="card">
+                                <div class="card-header no-border">
+                                    <h4 class="card-title float-left">
+                                        Doctors Group
+                                    </h4>
+                                    <span class="float-right"
+                                        ><a href="appointments.html"
+                                            >View all</a
+                                        ></span
+                                    >
+                                </div>
                                 <div class="card-body">
                                     <div class="table-responsive">
                                         <table class="table mb-0">
                                             <thead>
                                                 <tr>
-                                                    <th>Title</th>
-                                                    <th>Total Patients</th>
-                                                    <th>Applicable Patients</th>
-                                                    <th>
-                                                        Denominator Exclusion
-                                                    </th>
-                                                    <th>Passed Patients</th>
-                                                    <th>Failed Patients</th>
-                                                    <th>
-                                                        Performance Percentage
+                                                    <th>Medical speciality</th>
+                                                    <th class="text-right pt-0">
+                                                        Count
                                                     </th>
                                                 </tr>
                                             </thead>
                                             <tbody>
                                                 <tr>
-                                                    <td>
-                                                        Adult Weight Screening
-                                                        and Follow-Up
-                                                    </td>
-                                                    <td class="text-center">
-                                                        12
-                                                    </td>
-                                                    <td class="text-center">
-                                                        08
-                                                    </td>
-                                                    <td class="text-center">
-                                                        00
-                                                    </td>
-                                                    <td class="text-center">
-                                                        01
-                                                    </td>
-                                                    <td class="text-center">
-                                                        03
-                                                    </td>
-                                                    <td class="text-center">
-                                                        85.00%
+                                                    <td>Neurocirugía</td>
+                                                    <td
+                                                        class="
+                                                            text-right text-fade
+                                                        "
+                                                    >
+                                                        5 Doctors
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td>
-                                                        Cancer Screening: Colon
-                                                        Cancer Screening
-                                                    </td>
-                                                    <td class="text-center">
-                                                        16
-                                                    </td>
-                                                    <td class="text-center">
-                                                        07
-                                                    </td>
-                                                    <td class="text-center">
-                                                        00
-                                                    </td>
-                                                    <td class="text-center">
-                                                        01
-                                                    </td>
-                                                    <td class="text-center">
-                                                        04
-                                                    </td>
-                                                    <td class="text-center">
-                                                        79.00%
+                                                    <td>Infectología</td>
+                                                    <td
+                                                        class="
+                                                            text-right text-fade
+                                                        "
+                                                    >
+                                                        14 Doctors
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td>
-                                                        Cancer Screening:
-                                                        Mammogram
-                                                    </td>
-                                                    <td class="text-center">
-                                                        22
-                                                    </td>
-                                                    <td class="text-center">
-                                                        05
-                                                    </td>
-                                                    <td class="text-center">
-                                                        00
-                                                    </td>
-                                                    <td class="text-center">
-                                                        02
-                                                    </td>
-                                                    <td class="text-center">
-                                                        05
-                                                    </td>
-                                                    <td class="text-center">
-                                                        56.00%
+                                                    <td>Cirugía General</td>
+                                                    <td
+                                                        class="
+                                                            text-right text-fade
+                                                        "
+                                                    >
+                                                        10 Doctors
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td>
-                                                        Cancer Screening: Pap
-                                                        Smear
+                                                    <td>Medicina Interna</td>
+                                                    <td
+                                                        class="
+                                                            text-right text-fade
+                                                        "
+                                                    >
+                                                        21 Doctors
                                                     </td>
-                                                    <td class="text-center">
-                                                        21
-                                                    </td>
-                                                    <td class="text-center">
-                                                        04
-                                                    </td>
-                                                    <td class="text-center">
-                                                        00
-                                                    </td>
-                                                    <td class="text-center">
-                                                        02
-                                                    </td>
-                                                    <td class="text-center">
-                                                        06
-                                                    </td>
-                                                    <td class="text-center">
-                                                        48.00%
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 d-flex flex-wrap">
+                            <div class="card">
+                                <div class="card-header no-border">
+                                    <h4 class="card-title float-left">
+                                        Patients Group
+                                    </h4>
+                                    <span class="float-right"
+                                        ><a href="appointments.html"
+                                            >View all</a
+                                        ></span
+                                    >
+                                </div>
+                                <div class="card-body">
+                                    <div class="table-responsive">
+                                        <table class="table mb-0">
+                                            <thead>
+                                                <tr>
+                                                    <th>Issues</th>
+                                                    <th class="text-right pt-0">
+                                                        Count
+                                                    </th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Cholesterol</td>
+                                                    <td
+                                                        class="
+                                                            text-right text-fade
+                                                        "
+                                                    >
+                                                        5 Patients
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td>Diabetes: Eye Exam</td>
-                                                    <td class="text-center">
-                                                        14
-                                                    </td>
-                                                    <td class="text-center">
-                                                        02
-                                                    </td>
-                                                    <td class="text-center">
-                                                        00
-                                                    </td>
-                                                    <td class="text-center">
-                                                        01
-                                                    </td>
-                                                    <td class="text-center">
-                                                        04
-                                                    </td>
-                                                    <td class="text-center">
-                                                        72.00%
+                                                    <td>Diabetic</td>
+                                                    <td
+                                                        class="
+                                                            text-right text-fade
+                                                        "
+                                                    >
+                                                        14 Patients
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td>Diabetes: Foot Exam</td>
-                                                    <td class="text-center">
-                                                        08
+                                                    <td>Blood Pressure</td>
+                                                    <td
+                                                        class="
+                                                            text-right text-fade
+                                                        "
+                                                    >
+                                                        10 Patients
                                                     </td>
-                                                    <td class="text-center">
-                                                        02
-                                                    </td>
-                                                    <td class="text-center">
-                                                        00
-                                                    </td>
-                                                    <td class="text-center">
-                                                        03
-                                                    </td>
-                                                    <td class="text-center">
-                                                        05
-                                                    </td>
-                                                    <td class="text-center">
-                                                        64.00%
+                                                </tr>
+                                                <tr>
+                                                    <td>Hypertension</td>
+                                                    <td
+                                                        class="
+                                                            text-right text-fade
+                                                        "
+                                                    >
+                                                        21 Patients
                                                     </td>
                                                 </tr>
                                             </tbody>
@@ -566,6 +498,95 @@
                             </div>
                         </div>
                     </div>
+                    <div class="col-xl-12 d-flex">
+                        <div class="card flex-fill">
+                            <div class="card-header">
+                                <div
+                                    class="
+                                        d-flex
+                                        justify-content-between
+                                        align-items-center
+                                    "
+                                >
+                                    <h5 class="card-title">Patients Profile</h5>
+                                    <div
+                                        class="dropdown"
+                                        data-toggle="dropdown"
+                                    >
+                                        <a
+                                            href="javascript:void(0);"
+                                            class="
+                                                btn btn-white btn-sm
+                                                dropdown-toggle
+                                            "
+                                            role="button"
+                                            data-toggle="dropdown"
+                                        >
+                                            This Week
+                                        </a>
+                                        <div
+                                            class="
+                                                dropdown-menu
+                                                dropdown-menu-right
+                                            "
+                                        >
+                                            <a
+                                                href="javascript:void(0);"
+                                                class="dropdown-item"
+                                                >Today</a
+                                            >
+                                            <a
+                                                href="javascript:void(0);"
+                                                class="dropdown-item"
+                                                >This Week</a
+                                            >
+                                            <a
+                                                href="javascript:void(0);"
+                                                class="dropdown-item"
+                                                >This Month</a
+                                            >
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <div
+                                    class="
+                                        d-flex
+                                        align-items-center
+                                        justify-content-between
+                                        flex-wrap flex-md-nowrap
+                                    "
+                                >
+                                    <div
+                                        class="
+                                            w-100
+                                            d-md-flex
+                                            align-items-center
+                                            mb-3
+                                            chart-count
+                                        "
+                                    >
+                                        <div class="mr-3 text-center">
+                                            <span>Total Appointments</span>
+                                            <p class="h4 text-primary">584</p>
+                                        </div>
+                                        <div class="mr-3 text-center">
+                                            <span>Old Patients</span>
+                                            <p class="h4 text-success">320</p>
+                                        </div>
+                                        <div class="mr-3 text-center">
+                                            <span>New Patients</span>
+                                            <p class="h4 text-warning">264</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="dsh_chart_ex_column"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row"></div>
                 </div>
             </div>
             <!-- /Page Wrapper -->
@@ -754,6 +775,14 @@
 
         <!-- Slimscroll JS -->
         <script src="assets/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+
+        <!-- Chart JS -->
+        <script src="assets/plugins/apexchart/apexcharts.min.js"></script>
+        <script src="assets/plugins/apexchart/dsh-apaxcharts.js"></script>
+
+        <!-- calendar Js -->
+        <script src="assets/plugins/simple-calendar/jquery.simple-calendar.js"></script>
+        <script src="assets/js/calander.js"></script>
 
         <!-- Custom JS -->
         <script src="assets/js/script.js"></script>

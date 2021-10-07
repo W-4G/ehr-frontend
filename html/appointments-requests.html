@@ -28,6 +28,12 @@
             href="assets/plugins/fontawesome/css/all.min.css"
         />
 
+        <!-- calendar CSS -->
+        <link
+            rel="stylesheet"
+            href="assets/plugins/simple-calendar/simple-calendar.css"
+        />
+
         <!-- Feathericon CSS -->
         <link rel="stylesheet" href="assets/css/feather.css" />
 
@@ -41,10 +47,10 @@
             <div class="header">
                 <!-- Logo -->
                 <div class="header-left">
-                    <a href="dashboard.html" class="logo">
+                    <a href="dashboard-patient.html" class="logo">
                         <img src="assets/img/logo.png" alt="Logo" />
                     </a>
-                    <a href="dashboard.html" class="logo logo-small">
+                    <a href="dashboard-patient.html" class="logo logo-small">
                         <img
                             src="assets/img/logo-small.png"
                             alt="Logo"
@@ -76,9 +82,6 @@
                 <!-- /Mobile Menu Toggle -->
                 <!-- Header Right Menu -->
                 <ul class="nav user-menu">
-                    <!-- Flag -->
-
-                    <!-- /Flag -->
                     <!-- Notifications -->
                     <li class="nav-item dropdown">
                         <a href="#" class="nav-link notifications-item">
@@ -86,11 +89,12 @@
                             <span class="badge badge-pill">3</span>
                         </a>
                     </li>
+
                     <!-- /Notifications -->
                     <!-- Chat -->
                     <li class="nav-item dropdown">
                         <a
-                            href="chat.html"
+                            href="chat-patient.html"
                             class="dropdown-toggle nav-link chat-header"
                         >
                             <i class="feather-message-square"></i>
@@ -116,7 +120,16 @@
                             <a class="dropdown-item" href="settings.html">
                                 <i class="feather-settings"></i>Settings
                             </a>
-                            <a class="dropdown-item" href="login.html"
+                            <a class="dropdown-item" href="dashboard.html">
+                                <i class="fas fa-user-md"></i>Doctor View
+                            </a>
+                            <a
+                                class="dropdown-item"
+                                href="dashboard-admin.html"
+                            >
+                                <i class="fas fa-user-cog"></i>Admins View
+                            </a>
+                            <a class="dropdown-item" href="index.html"
                                 ><i class="feather-power"></i> Logout</a
                             >
                         </div>
@@ -133,101 +146,56 @@
                         <ul>
                             <li class="menu-title"><span>Main</span></li>
                             <li>
-                                <a href="dashboard.html"
-                                    ><i class="feather-home"></i>
-                                    <span>Back to Home</span></a
+                                <a href="dashboard-patient.html"
+                                    ><i class="feather-home"></i
+                                    ><span class="shape1"></span
+                                    ><span class="shape2"></span
+                                    ><span>Dashboard</span></a
+                                >
+                            </li>
+                            <li>
+                                <a href="medical-history.html"
+                                    ><i class="fas fa-book-medical"></i>
+                                    <span>Medical History</span></a
                                 >
                             </li>
                             <li class="submenu active">
                                 <a href="#"
-                                    ><i class="feather-user"></i
-                                    ><span class="shape1"></span
-                                    ><span class="shape2"></span>
-                                    <span> Patients</span>
-                                    <span class="menu-arrow"></span
-                                ></a>
+                                    ><i class="feather-list"></i>
+                                    <span>Appointments</span>
+                                    <span class="menu-arrow"></span>
+                                    <!-- <span class="badge bg-success-text">2</span> -->
+                                </a>
                                 <ul style="display: none">
                                     <li>
-                                        <a href="patients.html"
-                                            >Patients List</a
-                                        >
-                                    </li>
-                                    <li>
-                                        <a href="patients-profile.html"
-                                            >Patient Profile</a
-                                        >
-                                    </li>
-                                    <li>
-                                        <a href="patients-history.html"
-                                            >History</a
-                                        >
-                                    </li>
-                                    <li>
-                                        <a href="patients-report.html"
-                                            >Report</a
-                                        >
-                                    </li>
-                                    <li>
-                                        <a href="patients-documents.html"
-                                            >Documents</a
+                                        <a href="appointments-patient.html"
+                                            >Appointments list</a
                                         >
                                     </li>
                                     <li>
                                         <a
-                                            href="patients-transactions.html"
+                                            href="appointments-requests.html"
                                             class="active"
-                                            >Transactions</a
-                                        >
-                                    </li>
-                                    <li>
-                                        <a href="patients-issues.html"
-                                            >Issues</a
-                                        >
-                                    </li>
-                                    <li>
-                                        <a href="patients-data.html"
-                                            >External Data</a
+                                            >Request appointments</a
                                         >
                                     </li>
                                 </ul>
                             </li>
-                            <li class="submenu">
-                                <a href="#"
-                                    ><i class="feather-eye"></i>
-                                    <span> Visits</span>
-                                    <span class="menu-arrow"></span
-                                ></a>
-                                <ul style="display: none">
-                                    <li>
-                                        <a href="create-visit.html"
-                                            >Create Visit</a
-                                        >
-                                    </li>
-                                    <li>
-                                        <a href="visit-history.html"
-                                            >Visit History</a
-                                        >
-                                    </li>
-                                </ul>
+
+                            <li>
+                                <a href="calendar-patient.html"
+                                    ><i class="feather-calendar"></i>
+                                    <span>Calendar</span>
+                                </a>
                             </li>
-                            <li class="submenu">
-                                <a href="#"
-                                    ><i class="feather-crosshair"></i>
-                                    <span> Procedures</span>
-                                    <span class="menu-arrow"></span
-                                ></a>
-                                <ul style="display: none">
-                                    <li>
-                                        <a href="pending-review.html"
-                                            >Pending Review</a
-                                        >
-                                    </li>
-                                    <li>
-                                        <a href="patients-results.html"
-                                            >Patient Results</a
-                                        >
-                                    </li>
-                                </ul>
+                            <li>
+                                <a href="chat-patient.html"
+                                    ><i class="feather-message-circle"></i>
+                                    <span>Messages</span
+                                    ><span class="badge bg-orange-text"
+                                        >4</span
+                                    ></a
+                                >
                             </li>
                         </ul>
                     </div>
@@ -252,18 +220,21 @@
                                         </li>
                                         <li class="breadcrumb-item">
                                             <a href="dashboard.html"
-                                                >Doctor Dashboard</a
+                                                >Dashboard</a
                                             >
                                         </li>
+                                        <li class="breadcrumb-item">
+                                            <a href="#">Appointments</a>
+                                        </li>
                                         <li class="breadcrumb-item active">
-                                            Patients Transactions
+                                            Appointments Request
                                         </li>
                                     </ul>
                                 </div>
                             </div>
                             <div class="col-auto text-right">
                                 <a
-                                    class="btn btn-white filter-btn mr-3"
+                                    class="btn btn-white filter-btn"
                                     href="javascript:void(0);"
                                     id="filter_search"
                                 >
@@ -284,7 +255,7 @@
                                 <div class="row filter-row">
                                     <div class="col-sm-6 col-md-4">
                                         <div class="form-group">
-                                            <label>Bill Date</label>
+                                            <label>Patient ID</label>
                                             <input
                                                 class="form-control"
                                                 type="text"
@@ -294,7 +265,7 @@
                                     </div>
                                     <div class="col-sm-6 col-md-4">
                                         <div class="form-group">
-                                            <label>Doctor</label>
+                                            <label>Patient Name</label>
                                             <input
                                                 class="form-control"
                                                 type="text"
@@ -304,7 +275,7 @@
                                     </div>
                                     <div class="col-sm-6 col-md-4">
                                         <div class="form-group">
-                                            <label>Type</label>
+                                            <label>Date</label>
                                             <input
                                                 class="form-control"
                                                 type="text"
@@ -323,33 +294,44 @@
                             <div class="card">
                                 <div class="card-body">
                                     <div class="table-responsive">
-                                        <table class="table mb-0">
+                                        <table class="table">
                                             <thead>
                                                 <tr>
-                                                    <th>Bill Date</th>
-                                                    <th>Doctor</th>
-                                                    <th>Charges</th>
-                                                    <th>Tax</th>
-                                                    <th>Total</th>
-                                                    <th>Type</th>
+                                                    <th>ID</th>
+                                                    <th>Patient Name</th>
+                                                    <th>Age</th>
+                                                    <th>Request Date</th>
+
+                                                    <th>Disease</th>
+                                                    <th>Status</th>
                                                     <th>Action</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
                                                 <tr>
+                                                    <td>APT0001</td>
+                                                    <td>
+                                                        <a
+                                                            href="patients-profile.html"
+                                                            ><img
+                                                                width="28"
+                                                                height="28"
+                                                                src="assets/img/profiles/avatar-07.jpg"
+                                                                class="
+                                                                    rounded-circle
+                                                                    m-r-5
+                                                                "
+                                                                alt=""
+                                                            />
+                                                            Brandon Stone</a
+                                                        >
+                                                    </td>
+                                                    <td>39</td>
                                                     <td>11 Dec 2020</td>
-                                                    <td>Henry Daniels</td>
-                                                    <td>$ 318</td>
-                                                    <td>18%</td>
-                                                    <td>$ 330</td>
-                                                    <td>
-                                                        <span
-                                                            class="
-                                                                badge
-                                                                bg-warning-light
-                                                            "
-                                                            >Credit</span
-                                                        >
+
+                                                    <td>Cold</td>
+                                                    <td class="text-warning">
+                                                        Pending
                                                     </td>
                                                     <td
                                                         class="
@@ -358,7 +340,7 @@
                                                         "
                                                     >
                                                         <a
-                                                            href="invoice.html"
+                                                            href="appointments-schedule.html"
                                                             class="
                                                                 btn
                                                                 btn-sm
@@ -366,16 +348,15 @@
                                                                 text-success
                                                                 mr-2
                                                                 d-flex
-                                                                align-items-center
                                                             "
                                                             ><i
                                                                 class="
                                                                     fas
-                                                                    fa-eye
+                                                                    fa-check
                                                                     mr-1
                                                                 "
                                                             ></i>
-                                                            View</a
+                                                            Accept</a
                                                         >
                                                         <a
                                                             href="javascript:void(0);"
@@ -386,33 +367,42 @@
                                                                 text-danger
                                                                 mr-2
                                                                 d-flex
-                                                                align-items-center
                                                             "
                                                             ><i
                                                                 class="
                                                                     far
-                                                                    fa-trash-alt
+                                                                    fa-times-circle
                                                                     mr-1
                                                                 "
                                                             ></i
-                                                            >Delete</a
+                                                            >Deny</a
                                                         >
                                                     </td>
                                                 </tr>
                                                 <tr>
+                                                    <td>APT0002</td>
+                                                    <td>
+                                                        <a
+                                                            href="patients-profile.html"
+                                                            ><img
+                                                                width="28"
+                                                                height="28"
+                                                                src="assets/img/profiles/avatar-06.jpg"
+                                                                class="
+                                                                    rounded-circle
+                                                                    m-r-5
+                                                                "
+                                                                alt=""
+                                                            />
+                                                            Terry Baker</a
+                                                        >
+                                                    </td>
+                                                    <td>29</td>
                                                     <td>5 Dec 2020</td>
-                                                    <td>Doris Wilder</td>
-                                                    <td>$ 256</td>
-                                                    <td>18%</td>
-                                                    <td>$ 267</td>
-                                                    <td>
-                                                        <span
-                                                            class="
-                                                                badge
-                                                                bg-info-light
-                                                            "
-                                                            >Debit</span
-                                                        >
+
+                                                    <td>Fever</td>
+                                                    <td class="text-warning">
+                                                        Pending
                                                     </td>
                                                     <td
                                                         class="
@@ -421,7 +411,7 @@
                                                         "
                                                     >
                                                         <a
-                                                            href="invoice.html"
+                                                            href="appointments-schedule.html"
                                                             class="
                                                                 btn
                                                                 btn-sm
@@ -429,16 +419,15 @@
                                                                 text-success
                                                                 mr-2
                                                                 d-flex
-                                                                align-items-center
                                                             "
                                                             ><i
                                                                 class="
                                                                     fas
-                                                                    fa-eye
+                                                                    fa-check
                                                                     mr-1
                                                                 "
                                                             ></i>
-                                                            View</a
+                                                            Accept</a
                                                         >
                                                         <a
                                                             href="javascript:void(0);"
@@ -449,33 +438,42 @@
                                                                 text-danger
                                                                 mr-2
                                                                 d-flex
-                                                                align-items-center
                                                             "
                                                             ><i
                                                                 class="
                                                                     far
-                                                                    fa-trash-alt
+                                                                    fa-times-circle
                                                                     mr-1
                                                                 "
                                                             ></i
-                                                            >Delete</a
+                                                            >Deny</a
                                                         >
                                                     </td>
                                                 </tr>
                                                 <tr>
+                                                    <td>APT0003</td>
+                                                    <td>
+                                                        <a
+                                                            href="patients-profile.html"
+                                                            ><img
+                                                                width="28"
+                                                                height="28"
+                                                                src="assets/img/profiles/avatar-04.jpg"
+                                                                class="
+                                                                    rounded-circle
+                                                                    m-r-5
+                                                                "
+                                                                alt=""
+                                                            />
+                                                            Kyle Woodbury</a
+                                                        >
+                                                    </td>
+                                                    <td>42</td>
                                                     <td>6 Jan 2020</td>
-                                                    <td>Gavin Joyce</td>
-                                                    <td>$ 134</td>
-                                                    <td>18%</td>
-                                                    <td>$ 156</td>
-                                                    <td>
-                                                        <span
-                                                            class="
-                                                                badge
-                                                                bg-info-light
-                                                            "
-                                                            >Debit</span
-                                                        >
+
+                                                    <td>heart</td>
+                                                    <td class="text-warning">
+                                                        Pending
                                                     </td>
                                                     <td
                                                         class="
@@ -484,7 +482,7 @@
                                                         "
                                                     >
                                                         <a
-                                                            href="invoice.html"
+                                                            href="appointments-schedule.html"
                                                             class="
                                                                 btn
                                                                 btn-sm
@@ -492,16 +490,15 @@
                                                                 text-success
                                                                 mr-2
                                                                 d-flex
-                                                                align-items-center
                                                             "
                                                             ><i
                                                                 class="
                                                                     fas
-                                                                    fa-eye
+                                                                    fa-check
                                                                     mr-1
                                                                 "
                                                             ></i>
-                                                            View</a
+                                                            Accept</a
                                                         >
                                                         <a
                                                             href="javascript:void(0);"
@@ -512,33 +509,42 @@
                                                                 text-danger
                                                                 mr-2
                                                                 d-flex
-                                                                align-items-center
                                                             "
                                                             ><i
                                                                 class="
                                                                     far
-                                                                    fa-trash-alt
+                                                                    fa-times-circle
                                                                     mr-1
                                                                 "
                                                             ></i
-                                                            >Delete</a
+                                                            >Deny</a
                                                         >
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td>19 Dec 2019</td>
-                                                    <td>Yuri Berry</td>
-                                                    <td>$ 145</td>
-                                                    <td>18%</td>
-                                                    <td>$ 160</td>
+                                                    <td>APT0004</td>
                                                     <td>
-                                                        <span
-                                                            class="
-                                                                badge
-                                                                bg-warning-light
-                                                            "
-                                                            >Credit</span
+                                                        <a
+                                                            href="patients-profile.html"
+                                                            ><img
+                                                                width="28"
+                                                                height="28"
+                                                                src="assets/img/profiles/avatar-05.jpg"
+                                                                class="
+                                                                    rounded-circle
+                                                                    m-r-5
+                                                                "
+                                                                alt=""
+                                                            />
+                                                            Marie Gallardo</a
                                                         >
+                                                    </td>
+                                                    <td>23</td>
+                                                    <td>19 Dec 2020</td>
+
+                                                    <td>Diabeties</td>
+                                                    <td class="text-warning">
+                                                        Pending
                                                     </td>
                                                     <td
                                                         class="
@@ -547,7 +553,7 @@
                                                         "
                                                     >
                                                         <a
-                                                            href="invoice.html"
+                                                            href="appointments-schedule.html"
                                                             class="
                                                                 btn
                                                                 btn-sm
@@ -555,16 +561,15 @@
                                                                 text-success
                                                                 mr-2
                                                                 d-flex
-                                                                align-items-center
                                                             "
                                                             ><i
                                                                 class="
                                                                     fas
-                                                                    fa-eye
+                                                                    fa-check
                                                                     mr-1
                                                                 "
                                                             ></i>
-                                                            View</a
+                                                            Accept</a
                                                         >
                                                         <a
                                                             href="javascript:void(0);"
@@ -575,33 +580,42 @@
                                                                 text-danger
                                                                 mr-2
                                                                 d-flex
-                                                                align-items-center
                                                             "
                                                             ><i
                                                                 class="
                                                                     far
-                                                                    fa-trash-alt
+                                                                    fa-times-circle
                                                                     mr-1
                                                                 "
                                                             ></i
-                                                            >Delete</a
+                                                            >Deny</a
                                                         >
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td>15 Dec 2019</td>
-                                                    <td>Henry Daniels</td>
-                                                    <td>$ 213</td>
-                                                    <td>18%</td>
-                                                    <td>$ 246</td>
+                                                    <td>APT0005</td>
                                                     <td>
-                                                        <span
-                                                            class="
-                                                                badge
-                                                                bg-warning-light
-                                                            "
-                                                            >Credit</span
+                                                        <a
+                                                            href="patients-profile.html"
+                                                            ><img
+                                                                width="28"
+                                                                height="28"
+                                                                src="assets/img/profiles/avatar-03.jpg"
+                                                                class="
+                                                                    rounded-circle
+                                                                    m-r-5
+                                                                "
+                                                                alt=""
+                                                            />
+                                                            Maurice Guz</a
                                                         >
+                                                    </td>
+                                                    <td>55</td>
+                                                    <td>15 Dec 2020</td>
+
+                                                    <td>Cold</td>
+                                                    <td class="text-warning">
+                                                        Pending
                                                     </td>
                                                     <td
                                                         class="
@@ -610,7 +624,7 @@
                                                         "
                                                     >
                                                         <a
-                                                            href="invoice.html"
+                                                            href="appointments-schedule.html"
                                                             class="
                                                                 btn
                                                                 btn-sm
@@ -618,16 +632,15 @@
                                                                 text-success
                                                                 mr-2
                                                                 d-flex
-                                                                align-items-center
                                                             "
                                                             ><i
                                                                 class="
                                                                     fas
-                                                                    fa-eye
+                                                                    fa-check
                                                                     mr-1
                                                                 "
                                                             ></i>
-                                                            View</a
+                                                            Accept</a
                                                         >
                                                         <a
                                                             href="javascript:void(0);"
@@ -638,33 +651,42 @@
                                                                 text-danger
                                                                 mr-2
                                                                 d-flex
-                                                                align-items-center
                                                             "
                                                             ><i
                                                                 class="
                                                                     far
-                                                                    fa-trash-alt
+                                                                    fa-times-circle
                                                                     mr-1
                                                                 "
                                                             ></i
-                                                            >Delete</a
+                                                            >Deny</a
                                                         >
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td>11 Dec 2019</td>
-                                                    <td>Henry Daniels</td>
-                                                    <td>$ 310</td>
-                                                    <td>18%</td>
-                                                    <td>$ 370</td>
+                                                    <td>APT0006</td>
                                                     <td>
-                                                        <span
-                                                            class="
-                                                                badge
-                                                                bg-info-light
-                                                            "
-                                                            >Debit</span
+                                                        <a
+                                                            href="patients-profile.html"
+                                                            ><img
+                                                                width="28"
+                                                                height="28"
+                                                                src="assets/img/profiles/avatar-01.jpg"
+                                                                class="
+                                                                    rounded-circle
+                                                                    m-r-5
+                                                                "
+                                                                alt=""
+                                                            />
+                                                            Julia Sims</a
                                                         >
+                                                    </td>
+                                                    <td>39</td>
+                                                    <td>11 Dec 2020</td>
+
+                                                    <td>heart</td>
+                                                    <td class="text-warning">
+                                                        Pending
                                                     </td>
                                                     <td
                                                         class="
@@ -673,7 +695,7 @@
                                                         "
                                                     >
                                                         <a
-                                                            href="invoice.html"
+                                                            href="appointments-schedule.html"
                                                             class="
                                                                 btn
                                                                 btn-sm
@@ -681,16 +703,15 @@
                                                                 text-success
                                                                 mr-2
                                                                 d-flex
-                                                                align-items-center
                                                             "
                                                             ><i
                                                                 class="
                                                                     fas
-                                                                    fa-eye
+                                                                    fa-check
                                                                     mr-1
                                                                 "
                                                             ></i>
-                                                            View</a
+                                                            Accept</a
                                                         >
                                                         <a
                                                             href="javascript:void(0);"
@@ -701,33 +722,42 @@
                                                                 text-danger
                                                                 mr-2
                                                                 d-flex
-                                                                align-items-center
                                                             "
                                                             ><i
                                                                 class="
                                                                     far
-                                                                    fa-trash-alt
+                                                                    fa-times-circle
                                                                     mr-1
                                                                 "
                                                             ></i
-                                                            >Delete</a
+                                                            >Deny</a
                                                         >
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td>5 Dec 2019</td>
-                                                    <td>Doris Wilder</td>
-                                                    <td>$ 56</td>
-                                                    <td>18%</td>
-                                                    <td>$ 115</td>
+                                                    <td>APT0007</td>
                                                     <td>
-                                                        <span
-                                                            class="
-                                                                badge
-                                                                bg-info-light
-                                                            "
-                                                            >Debit</span
+                                                        <a
+                                                            href="patients-profile.html"
+                                                            ><img
+                                                                width="28"
+                                                                height="28"
+                                                                src="assets/img/profiles/avatar-02.jpg"
+                                                                class="
+                                                                    rounded-circle
+                                                                    m-r-5
+                                                                "
+                                                                alt=""
+                                                            />
+                                                            Linda Carp</a
                                                         >
+                                                    </td>
+                                                    <td>29</td>
+                                                    <td>5 Dec 2020</td>
+
+                                                    <td>Diabeties</td>
+                                                    <td class="text-warning">
+                                                        Pending
                                                     </td>
                                                     <td
                                                         class="
@@ -736,7 +766,7 @@
                                                         "
                                                     >
                                                         <a
-                                                            href="invoice.html"
+                                                            href="appointments-schedule.html"
                                                             class="
                                                                 btn
                                                                 btn-sm
@@ -744,16 +774,15 @@
                                                                 text-success
                                                                 mr-2
                                                                 d-flex
-                                                                align-items-center
                                                             "
                                                             ><i
                                                                 class="
                                                                     fas
-                                                                    fa-eye
+                                                                    fa-check
                                                                     mr-1
                                                                 "
                                                             ></i>
-                                                            View</a
+                                                            Accept</a
                                                         >
                                                         <a
                                                             href="javascript:void(0);"
@@ -764,33 +793,40 @@
                                                                 text-danger
                                                                 mr-2
                                                                 d-flex
-                                                                align-items-center
                                                             "
                                                             ><i
                                                                 class="
                                                                     far
-                                                                    fa-trash-alt
+                                                                    fa-times-circle
                                                                     mr-1
                                                                 "
                                                             ></i
-                                                            >Delete</a
+                                                            >Deny</a
                                                         >
                                                     </td>
                                                 </tr>
                                                 <tr>
+                                                    <td>APT0008</td>
+                                                    <td>
+                                                        <a
+                                                            href="patients-profile.html"
+                                                            ><img
+                                                                src="assets/img/profiles/avatar-08.jpg"
+                                                                class="
+                                                                    rounded-circle
+                                                                    m-r-5
+                                                                    profile-img
+                                                                "
+                                                                alt=""
+                                                            />Joshua Maurice</a
+                                                        >
+                                                    </td>
+                                                    <td>42</td>
                                                     <td>6 Jan 2020</td>
-                                                    <td>Gavin Joyce</td>
-                                                    <td>$ 43</td>
-                                                    <td>18%</td>
-                                                    <td>$ 145</td>
-                                                    <td>
-                                                        <span
-                                                            class="
-                                                                badge
-                                                                bg-info-light
-                                                            "
-                                                            >Debit</span
-                                                        >
+
+                                                    <td>Fever</td>
+                                                    <td class="text-warning">
+                                                        Pending
                                                     </td>
                                                     <td
                                                         class="
@@ -799,7 +835,7 @@
                                                         "
                                                     >
                                                         <a
-                                                            href="invoice.html"
+                                                            href="appointments-schedule.html"
                                                             class="
                                                                 btn
                                                                 btn-sm
@@ -807,16 +843,15 @@
                                                                 text-success
                                                                 mr-2
                                                                 d-flex
-                                                                align-items-center
                                                             "
                                                             ><i
                                                                 class="
                                                                     fas
-                                                                    fa-eye
+                                                                    fa-check
                                                                     mr-1
                                                                 "
                                                             ></i>
-                                                            View</a
+                                                            Accept</a
                                                         >
                                                         <a
                                                             href="javascript:void(0);"
@@ -827,33 +862,41 @@
                                                                 text-danger
                                                                 mr-2
                                                                 d-flex
-                                                                align-items-center
                                                             "
                                                             ><i
                                                                 class="
                                                                     far
-                                                                    fa-trash-alt
+                                                                    fa-times-circle
                                                                     mr-1
                                                                 "
                                                             ></i
-                                                            >Delete</a
+                                                            >Deny</a
                                                         >
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td>19 Dec 2019</td>
-                                                    <td>Yuri Berry</td>
-                                                    <td>$ 89</td>
-                                                    <td>18%</td>
-                                                    <td>$ 213</td>
+                                                    <td>APT0009</td>
                                                     <td>
-                                                        <span
-                                                            class="
-                                                                badge
-                                                                bg-warning-light
-                                                            "
-                                                            >Credit</span
+                                                        <a
+                                                            href="patients-profile.html"
+                                                            ><img
+                                                                src="assets/img/profiles/avatar-10.jpg"
+                                                                class="
+                                                                    rounded-circle
+                                                                    m-r-5
+                                                                    profile-img
+                                                                "
+                                                                alt=""
+                                                            />
+                                                            Charles Clements</a
                                                         >
+                                                    </td>
+                                                    <td>55</td>
+                                                    <td>15 Dec 2020</td>
+
+                                                    <td>heart</td>
+                                                    <td class="text-warning">
+                                                        Pending
                                                     </td>
                                                     <td
                                                         class="
@@ -862,7 +905,7 @@
                                                         "
                                                     >
                                                         <a
-                                                            href="invoice.html"
+                                                            href="appointments-schedule.html"
                                                             class="
                                                                 btn
                                                                 btn-sm
@@ -870,16 +913,15 @@
                                                                 text-success
                                                                 mr-2
                                                                 d-flex
-                                                                align-items-center
                                                             "
                                                             ><i
                                                                 class="
                                                                     fas
-                                                                    fa-eye
+                                                                    fa-check
                                                                     mr-1
                                                                 "
                                                             ></i>
-                                                            View</a
+                                                            Accept</a
                                                         >
                                                         <a
                                                             href="javascript:void(0);"
@@ -890,79 +932,15 @@
                                                                 text-danger
                                                                 mr-2
                                                                 d-flex
-                                                                align-items-center
                                                             "
                                                             ><i
                                                                 class="
                                                                     far
-                                                                    fa-trash-alt
+                                                                    fa-times-circle
                                                                     mr-1
                                                                 "
                                                             ></i
-                                                            >Delete</a
-                                                        >
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>15 Dec 2019</td>
-                                                    <td>Henry Daniels</td>
-                                                    <td>$ 12</td>
-                                                    <td>18%</td>
-                                                    <td>$ 18</td>
-                                                    <td>
-                                                        <span
-                                                            class="
-                                                                badge
-                                                                bg-info-light
-                                                            "
-                                                            >Debit</span
-                                                        >
-                                                    </td>
-                                                    <td
-                                                        class="
-                                                            text-right
-                                                            d-flex
-                                                        "
-                                                    >
-                                                        <a
-                                                            href="invoice.html"
-                                                            class="
-                                                                btn
-                                                                btn-sm
-                                                                btn-white
-                                                                text-success
-                                                                mr-2
-                                                                d-flex
-                                                                align-items-center
-                                                            "
-                                                            ><i
-                                                                class="
-                                                                    fas
-                                                                    fa-eye
-                                                                    mr-1
-                                                                "
-                                                            ></i>
-                                                            View</a
-                                                        >
-                                                        <a
-                                                            href="javascript:void(0);"
-                                                            class="
-                                                                btn
-                                                                btn-sm
-                                                                btn-white
-                                                                text-danger
-                                                                mr-2
-                                                                d-flex
-                                                                align-items-center
-                                                            "
-                                                            ><i
-                                                                class="
-                                                                    far
-                                                                    fa-trash-alt
-                                                                    mr-1
-                                                                "
-                                                            ></i
-                                                            >Delete</a
+                                                            >Deny</a
                                                         >
                                                     </td>
                                                 </tr>
@@ -1146,7 +1124,7 @@
                     </ul>
                 </div>
                 <div class="topnav-dropdown-footer">
-                    <a href="#">View all Notifications</a>
+                    <a href="javascript:void(0);">View all Notifications</a>
                 </div>
             </div>
             <!-- /Notification -->

@@ -1,4 +1,4 @@
-S<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="utf-8" />
@@ -14,8 +14,8 @@ S<!DOCTYPE html>
             type="image/x-icon"
             href="assets/img/favicon.png"
         />
-
         <!-- Bootstrap CSS -->
+
         <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
 
         <!-- Fontawesome CSS -->
@@ -28,8 +28,17 @@ S<!DOCTYPE html>
             href="assets/plugins/fontawesome/css/all.min.css"
         />
 
-        <!-- Select CSS -->
-        <link rel="stylesheet" href="assets/css/select2.min.css" />
+        <!-- Full Calander CSS -->
+        <link
+            rel="stylesheet"
+            href="assets/plugins/fullcalendar/fullcalendar.min.css"
+        />
+
+        <!-- Datetimepicker CSS -->
+        <link
+            rel="stylesheet"
+            href="assets/css/bootstrap-datetimepicker.min.css"
+        />
 
         <!-- Feathericon CSS -->
         <link rel="stylesheet" href="assets/css/feather.css" />
@@ -91,16 +100,6 @@ S<!DOCTYPE html>
                     </li>
                     <!-- /Notifications -->
                     <!-- Chat -->
-                    <li class="nav-item dropdown">
-                        <a
-                            href="chat.html"
-                            class="dropdown-toggle nav-link chat-header"
-                        >
-                            <i class="feather-message-square"></i>
-                            <span class="badge badge-pill header-chat">6</span>
-                        </a>
-                    </li>
-                    <!-- /Chat -->
                     <li class="nav-item dropdown has-arrow main-drop ml-md-3">
                         <a
                             href="#"
@@ -119,7 +118,16 @@ S<!DOCTYPE html>
                             <a class="dropdown-item" href="settings.html">
                                 <i class="feather-settings"></i>Settings
                             </a>
-                            <a class="dropdown-item" href="login.html"
+                            <a class="dropdown-item" href="dashboard.html">
+                                <i class="fas fa-user-md"></i>Doctor View
+                            </a>
+                            <a
+                                class="dropdown-item"
+                                href="dashboard-admin.html"
+                            >
+                                <i class="fas fa-user-cog"></i>Admins View
+                            </a>
+                            <a class="dropdown-item" href="index.html"
                                 ><i class="feather-power"></i> Logout</a
                             >
                         </div>
@@ -136,101 +144,54 @@ S<!DOCTYPE html>
                         <ul>
                             <li class="menu-title"><span>Main</span></li>
                             <li>
-                                <a href="dashboard.html"
-                                    ><i class="feather-home"></i>
-                                    <span>Back to Home</span></a
+                                <a href="dashboard-patient.html"
+                                    ><i class="feather-home"></i
+                                    ><span class="shape1"></span
+                                    ><span class="shape2"></span
+                                    ><span>Dashboard</span></a
                                 >
                             </li>
-                            <li class="submenu active">
+                            <li>
+                                <a href="medical-history.html"
+                                    ><i class="fas fa-book-medical"></i>
+                                    <span>Medical History</span></a
+                                >
+                            </li>
+                            <li class="submenu">
                                 <a href="#"
-                                    ><i class="feather-user"></i
-                                    ><span class="shape1"></span
-                                    ><span class="shape2"></span>
-                                    <span> Patients</span>
-                                    <span class="menu-arrow"></span
-                                ></a>
+                                    ><i class="feather-list"></i>
+                                    <span>Appointments</span>
+                                    <span class="menu-arrow"></span>
+                                    <!-- <span class="badge bg-success-text">2</span> -->
+                                </a>
                                 <ul style="display: none">
                                     <li>
-                                        <a href="patients.html"
-                                            >Patients List</a
+                                        <a href="appointments-patient.html"
+                                            >Appointments list</a
                                         >
                                     </li>
                                     <li>
-                                        <a href="patients-profile.html"
-                                            >Patient Profile</a
-                                        >
-                                    </li>
-                                    <li>
-                                        <a href="patients-history.html"
-                                            >History</a
-                                        >
-                                    </li>
-                                    <li>
-                                        <a href="patients-report.html"
-                                            >Report</a
-                                        >
-                                    </li>
-                                    <li>
-                                        <a
-                                            href="patients-documents.html"
-                                            class="active"
-                                            >Documents</a
-                                        >
-                                    </li>
-                                    <li>
-                                        <a href="patients-transactions.html"
-                                            >Transactions</a
-                                        >
-                                    </li>
-                                    <li>
-                                        <a href="patients-issues.html"
-                                            >Issues</a
-                                        >
-                                    </li>
-                                    <li>
-                                        <a href="patients-data.html"
-                                            >External Data</a
+                                        <a href="appointments-requests.html"
+                                            >Request appointments</a
                                         >
                                     </li>
                                 </ul>
                             </li>
-                            <li class="submenu">
-                                <a href="#"
-                                    ><i class="feather-eye"></i>
-                                    <span> Visits</span>
-                                    <span class="menu-arrow"></span
-                                ></a>
-                                <ul style="display: none">
-                                    <li>
-                                        <a href="create-visit.html"
-                                            >Create Visit</a
-                                        >
-                                    </li>
-                                    <li>
-                                        <a href="visit-history.html"
-                                            >Visit History</a
-                                        >
-                                    </li>
-                                </ul>
+
+                            <li class="active">
+                                <a href="calendar-patient.html"
+                                    ><i class="feather-calendar"></i>
+                                    <span>Calendar</span>
+                                </a>
                             </li>
-                            <li class="submenu">
-                                <a href="#"
-                                    ><i class="feather-crosshair"></i>
-                                    <span> Procedures</span>
-                                    <span class="menu-arrow"></span
-                                ></a>
-                                <ul style="display: none">
-                                    <li>
-                                        <a href="pending-review.html"
-                                            >Pending Review</a
-                                        >
-                                    </li>
-                                    <li>
-                                        <a href="patients-results.html"
-                                            >Patient Results</a
-                                        >
-                                    </li>
-                                </ul>
+                            <li>
+                                <a href="chat-patient.html"
+                                    ><i class="feather-message-circle"></i>
+                                    <span>Messages</span
+                                    ><span class="badge bg-orange-text"
+                                        >4</span
+                                    ></a
+                                >
                             </li>
                         </ul>
                     </div>
@@ -244,7 +205,7 @@ S<!DOCTYPE html>
                     <!-- Page Header -->
                     <div class="page-header">
                         <div class="row align-items-center">
-                            <div class="col-md-12">
+                            <div class="col">
                                 <div class="d-flex align-items-center">
                                     <h5 class="page-title">Dashboard</h5>
                                     <ul class="breadcrumb ml-2">
@@ -255,141 +216,146 @@ S<!DOCTYPE html>
                                         </li>
                                         <li class="breadcrumb-item">
                                             <a href="dashboard.html"
-                                                >Doctor Dashboard</a
+                                                >Dashboard</a
                                             >
                                         </li>
                                         <li class="breadcrumb-item active">
-                                            Patients Documents
+                                            Calendar
                                         </li>
                                     </ul>
                                 </div>
                             </div>
+                            <div
+                                class="col-auto text-right float-right ml-auto"
+                            >
+                                <a
+                                    href="#"
+                                    class="btn btn-primary"
+                                    data-toggle="modal"
+                                    data-target="#add_event"
+                                    >Create Event</a
+                                >
+                            </div>
                         </div>
                     </div>
-                    <!-- Search Filter -->
-                    <form action="#" method="post" id="filter_inputs">
-                        <input
-                            type="hidden"
-                            name="csrf_token_name"
-                            value="4a0efd10c152f3f6117fec6b1be8e87e"
-                        />
-                        <div class="card filter-card">
-                            <div class="card-body pb-0">
-                                <div class="row filter-row">
-                                    <div class="col-sm-6 col-md-3">
-                                        <div class="form-group">
-                                            <label>Patient ID</label>
-                                            <input
-                                                class="form-control"
-                                                type="text"
-                                                name="from"
-                                            />
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-6 col-md-3">
-                                        <div class="form-group">
-                                            <label>Patient Name</label>
-                                            <input
-                                                class="form-control"
-                                                type="text"
-                                                name="from"
-                                            />
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-6 col-md-3">
-                                        <div class="form-group">
-                                            <label>Mobile Number</label>
-                                            <input
-                                                class="form-control"
-                                                type="text"
-                                                name="to"
-                                            />
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-6 col-md-3">
-                                        <div class="form-group">
-                                            <label>Email Id</label>
-                                            <input
-                                                class="form-control"
-                                                type="text"
-                                                name="to"
-                                            />
-                                        </div>
-                                    </div>
+                    <!-- /Page Header -->
+
+                    <div class="row">
+                        <div class="col-lg-3 col-md-4">
+                            <h4 class="card-title">Drag & Drop Event</h4>
+                            <div id="calendar-events" class="mb-3">
+                                <div
+                                    class="calendar-events"
+                                    data-class="bg-info"
+                                >
+                                    <i class="fas fa-circle text-info"></i> My
+                                    Event One
+                                </div>
+                                <div
+                                    class="calendar-events"
+                                    data-class="bg-success"
+                                >
+                                    <i class="fas fa-circle text-success"></i>
+                                    My Event Two
+                                </div>
+                                <div
+                                    class="calendar-events"
+                                    data-class="bg-danger"
+                                >
+                                    <i class="fas fa-circle text-danger"></i> My
+                                    Event Three
+                                </div>
+                                <div
+                                    class="calendar-events"
+                                    data-class="bg-warning"
+                                >
+                                    <i class="fas fa-circle text-warning"></i>
+                                    My Event Four
+                                </div>
+                            </div>
+                            <div class="checkbox mb-3">
+                                <input id="drop-remove" type="checkbox" />
+                                <label for="drop-remove">
+                                    Remove after drop
+                                </label>
+                            </div>
+                            <a
+                                href="#"
+                                data-toggle="modal"
+                                data-target="#add_new_event"
+                                class="btn mb-3 btn-primary btn-block"
+                            >
+                                <i class="fas fa-plus"></i> Add Category
+                            </a>
+                        </div>
+                        <div class="col-lg-9 col-md-8">
+                            <div class="card bg-white">
+                                <div class="card-body">
+                                    <div id="calendar"></div>
                                 </div>
                             </div>
                         </div>
-                    </form>
-                    <!-- /Search Filter -->
-                    <!-- /Page Header -->
-                    <div class="row">
-                        <div class="col-sm-12">
-                            <div class="card">
-                                <div class="card-header">
-                                    <h4 class="card-title">Upload Documents</h4>
+                    </div>
+
+                    <!-- Add Event Modal -->
+                    <div
+                        id="add_event"
+                        class="modal custom-modal fade"
+                        role="dialog"
+                    >
+                        <div
+                            class="modal-dialog modal-dialog-centered"
+                            role="document"
+                        >
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title">Add Event</h5>
+                                    <button
+                                        type="button"
+                                        class="close"
+                                        data-dismiss="modal"
+                                        aria-label="Close"
+                                    >
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
                                 </div>
-                                <div class="card-body">
-                                    <form action="#">
-                                        <div class="form-group row">
+                                <div class="modal-body">
+                                    <form>
+                                        <div class="form-group">
                                             <label
-                                                class="col-form-label col-md-2"
-                                                >Document List</label
+                                                >Event Name
+                                                <span class="text-danger"
+                                                    >*</span
+                                                ></label
                                             >
-                                            <div class="col-md-10">
-                                                <select class="select">
-                                                    <option>
-                                                        -- Select --
-                                                    </option>
-                                                    <option>
-                                                        Advanced Module
-                                                    </option>
-                                                    <option>CCD</option>
-                                                    <option>CCDA</option>
-                                                    <option>CCR</option>
-                                                    <option>Eye Module</option>
-                                                </select>
-                                            </div>
+                                            <input
+                                                class="form-control"
+                                                type="text"
+                                            />
                                         </div>
-                                        <div class="form-group row">
+                                        <div class="form-group">
                                             <label
-                                                class="col-form-label col-md-2"
-                                                >Destination Name</label
+                                                >Event Date
+                                                <span class="text-danger"
+                                                    >*</span
+                                                ></label
                                             >
-                                            <div class="col-md-10">
+                                            <div class="cal-icon">
                                                 <input
+                                                    class="
+                                                        form-control
+                                                        datetimepicker
+                                                    "
                                                     type="text"
-                                                    class="form-control"
-                                                    placeholder="Destination Name"
                                                 />
                                             </div>
                                         </div>
-                                        <div class="form-group row">
-                                            <label
-                                                class="col-form-label col-md-2"
-                                                >File Input</label
-                                            >
-                                            <div class="col-md-10">
-                                                <input
-                                                    class="form-control"
-                                                    type="file"
-                                                />
-                                                <p class="mt-2">
-                                                    NOTE: Uploading files with
-                                                    duplicate names will cause
-                                                    the files to be
-                                                    automatically renamed (for
-                                                    example, file.jpg will
-                                                    become file.1.jpg).
-                                                    Filenames are considered
-                                                    unique per patient, not per
-                                                    category.
-                                                </p>
-                                            </div>
-                                        </div>
-                                        <div class="text-right">
+                                        <div class="submit-section">
                                             <button
-                                                type="submit"
-                                                class="btn btn-primary"
+                                                class="
+                                                    btn btn-primary
+                                                    submit-btn
+                                                "
                                             >
                                                 Submit
                                             </button>
@@ -397,66 +363,123 @@ S<!DOCTYPE html>
                                     </form>
                                 </div>
                             </div>
-                            <div class="card">
-                                <div class="card-header">
-                                    <h4 class="card-title">View Documments</h4>
+                        </div>
+                    </div>
+                    <!-- /Add Event Modal -->
+
+                    <!-- Add Event Modal -->
+                    <div
+                        class="modal custom-modal fade none-border"
+                        id="my_event"
+                    >
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h4 class="modal-title">Add Event</h4>
+                                    <button
+                                        type="button"
+                                        class="close"
+                                        data-dismiss="modal"
+                                        aria-hidden="true"
+                                    >
+                                        &times;
+                                    </button>
                                 </div>
-                                <div class="card-body">
-                                    <form action="#">
-                                        <div class="form-group row">
-                                            <label
-                                                class="col-form-label col-md-2"
-                                                >Document Template</label
-                                            >
-                                            <div class="col-md-10">
-                                                <select class="select">
-                                                    <option>
-                                                        -- Select Template --
-                                                    </option>
-                                                    <option>
-                                                        Advanced Module
-                                                    </option>
-                                                    <option>CCD</option>
-                                                    <option>CCDA</option>
-                                                    <option>CCR</option>
-                                                    <option>Eye Module</option>
-                                                </select>
-                                            </div>
+                                <div class="modal-body"></div>
+                                <div
+                                    class="modal-footer justify-content-center"
+                                >
+                                    <button
+                                        type="button"
+                                        class="
+                                            btn btn-success
+                                            save-event
+                                            submit-btn
+                                        "
+                                    >
+                                        Create event
+                                    </button>
+                                    <button
+                                        type="button"
+                                        class="
+                                            btn btn-danger
+                                            delete-event
+                                            submit-btn
+                                        "
+                                        data-dismiss="modal"
+                                    >
+                                        Delete
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /Add Event Modal -->
+
+                    <!-- Add Category Modal -->
+                    <div class="modal custom-modal fade" id="add_new_event">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h4 class="modal-title">Add Category</h4>
+                                    <button
+                                        type="button"
+                                        class="close"
+                                        data-dismiss="modal"
+                                        aria-hidden="true"
+                                    >
+                                        &times;
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <form>
+                                        <div class="form-group">
+                                            <label>Category Name</label>
+                                            <input
+                                                class="form-control form-white"
+                                                placeholder="Enter name"
+                                                type="text"
+                                                name="category-name"
+                                            />
                                         </div>
-                                        <div class="text-right">
+                                        <div class="form-group mb-0">
+                                            <label>Choose Category Color</label>
+                                            <select
+                                                class="form-control form-white"
+                                                data-placeholder="Choose a color..."
+                                                name="category-color"
+                                            >
+                                                <option value="success">
+                                                    Success
+                                                </option>
+                                                <option value="danger">
+                                                    Danger
+                                                </option>
+                                                <option value="info">
+                                                    Info
+                                                </option>
+                                                <option value="primary">
+                                                    Primary
+                                                </option>
+                                                <option value="warning">
+                                                    Warning
+                                                </option>
+                                                <option value="inverse">
+                                                    Inverse
+                                                </option>
+                                            </select>
+                                        </div>
+                                        <div class="submit-section">
                                             <button
-                                                type="submit"
-                                                class="btn btn-primary"
+                                                type="button"
+                                                class="
+                                                    btn btn-primary
+                                                    save-category
+                                                    submit-btn
+                                                "
+                                                data-dismiss="modal"
                                             >
-                                                Fetch
-                                            </button>
-                                        </div>
-                                        <div class="form-group row mt-4">
-                                            <label
-                                                class="col-form-label col-md-2"
-                                                >Document Template</label
-                                            >
-                                            <div class="col-md-10">
-                                                <select class="select">
-                                                    <option>
-                                                        -- Open Form Module --
-                                                    </option>
-                                                    <option>
-                                                        Advanced Module
-                                                    </option>
-                                                    <option>CCD</option>
-                                                    <option>CCDA</option>
-                                                    <option>CCR</option>
-                                                    <option>Eye Module</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                        <div class="text-right">
-                                            <button
-                                                type="submit"
-                                                class="btn btn-primary"
-                                            >
-                                                Open
+                                                Save
                                             </button>
                                         </div>
                                     </form>
@@ -464,9 +487,10 @@ S<!DOCTYPE html>
                             </div>
                         </div>
                     </div>
+                    <!-- /Add Category Modal -->
                 </div>
             </div>
-            <!-- /Page Wrapper -->
+            <!-- /Main Wrapper -->
 
             <!-- Notification -->
             <div class="notifications">
@@ -637,7 +661,7 @@ S<!DOCTYPE html>
                     </ul>
                 </div>
                 <div class="topnav-dropdown-footer">
-                    <a href="#">View all Notifications</a>
+                    <a href="javascript:void(0);">View all Notifications</a>
                 </div>
             </div>
             <!-- /Notification -->
@@ -653,8 +677,14 @@ S<!DOCTYPE html>
         <!-- Slimscroll JS -->
         <script src="assets/plugins/slimscroll/jquery.slimscroll.min.js"></script>
 
-        <!-- Select JS -->
-        <script src="assets/js/select2.min.js"></script>
+        <!-- Datetimepicker JS -->
+        <script src="assets/plugins/moment/moment.min.js"></script>
+        <script src="assets/js/bootstrap-datetimepicker.min.js"></script>
+
+        <!-- Full Calendar JS -->
+        <script src="assets/js/jquery-ui.min.js"></script>
+        <script src="assets/plugins/fullcalendar/fullcalendar.min.js"></script>
+        <script src="assets/plugins/fullcalendar/jquery.fullcalendar.js"></script>
 
         <!-- Custom JS -->
         <script src="assets/js/script.js"></script>

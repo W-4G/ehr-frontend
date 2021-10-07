@@ -6,7 +6,7 @@
             name="viewport"
             content="width=device-width, initial-scale=1.0, user-scalable=0"
         />
-        <title>EMR - Blank Page</title>
+        <title>EMR - Appointments List</title>
 
         <!-- Favicon -->
         <link
@@ -116,7 +116,19 @@
                             <a class="dropdown-item" href="settings.html">
                                 <i class="feather-settings"></i>Settings
                             </a>
-                            <a class="dropdown-item" href="login.html"
+                            <a
+                                class="dropdown-item"
+                                href="dashboard-patient.html"
+                            >
+                                <i class="fas fa-user"></i>Patients View
+                            </a>
+                            <a
+                                class="dropdown-item"
+                                href="dashboard-admin.html"
+                            >
+                                <i class="fas fa-user-cog"></i>Admins View
+                            </a>
+                            <a class="dropdown-item" href="index.html"
                                 ><i class="feather-power"></i> Logout</a
                             >
                         </div>
@@ -160,10 +172,14 @@
                                         >
                                     </li>
                                     <li>
-                                        <a href="#">Appointments requests</a>
+                                        <a href="appointments-requests.html"
+                                            >Appointments requests</a
+                                        >
                                     </li>
                                     <li>
-                                        <a href="#">Schedule appointments</a>
+                                        <a href="appointments-schedule.html"
+                                            >Schedule appointments</a
+                                        >
                                     </li>
                                 </ul>
                             </li>
@@ -206,11 +222,14 @@
                                         </li>
                                         <li class="breadcrumb-item">
                                             <a href="dashboard.html"
-                                                >Doctor Dashboard</a
+                                                >Dashboard</a
                                             >
                                         </li>
+                                        <li class="breadcrumb-item">
+                                            <a href="#">Appointments</a>
+                                        </li>
                                         <li class="breadcrumb-item active">
-                                            Appointments
+                                            Appointments list
                                         </li>
                                     </ul>
                                 </div>
@@ -314,7 +333,7 @@
                                                     <td>10:00am-12:00am</td>
                                                     <td>Cold</td>
                                                     <td class="text-success">
-                                                        Approved
+                                                        Completed
                                                     </td>
                                                     <td
                                                         class="
@@ -340,25 +359,6 @@
                                                                 "
                                                             ></i>
                                                             Edit</a
-                                                        >
-                                                        <a
-                                                            href="javascript:void(0);"
-                                                            class="
-                                                                btn
-                                                                btn-sm
-                                                                btn-white
-                                                                text-danger
-                                                                mr-2
-                                                                d-flex
-                                                            "
-                                                            ><i
-                                                                class="
-                                                                    far
-                                                                    fa-trash-alt
-                                                                    mr-1
-                                                                "
-                                                            ></i
-                                                            >Delete</a
                                                         >
                                                     </td>
                                                 </tr>
@@ -384,8 +384,8 @@
                                                     <td>5 Dec 2020</td>
                                                     <td>10:00am-12:00am</td>
                                                     <td>Fever</td>
-                                                    <td class="text-danger">
-                                                        Canceled
+                                                    <td class="text-warning">
+                                                        Delayed
                                                     </td>
                                                     <td
                                                         class="
@@ -411,25 +411,6 @@
                                                                 "
                                                             ></i>
                                                             Edit</a
-                                                        >
-                                                        <a
-                                                            href="javascript:void(0);"
-                                                            class="
-                                                                btn
-                                                                btn-sm
-                                                                btn-white
-                                                                text-danger
-                                                                mr-2
-                                                                d-flex
-                                                            "
-                                                            ><i
-                                                                class="
-                                                                    far
-                                                                    fa-trash-alt
-                                                                    mr-1
-                                                                "
-                                                            ></i
-                                                            >Delete</a
                                                         >
                                                     </td>
                                                 </tr>
@@ -455,8 +436,8 @@
                                                     <td>6 Jan 2020</td>
                                                     <td>10:00am-12:00am</td>
                                                     <td>heart</td>
-                                                    <td class="text-success">
-                                                        Approved
+                                                    <td class="text-primary">
+                                                        Accepted
                                                     </td>
                                                     <td
                                                         class="
@@ -482,25 +463,6 @@
                                                                 "
                                                             ></i>
                                                             Edit</a
-                                                        >
-                                                        <a
-                                                            href="javascript:void(0);"
-                                                            class="
-                                                                btn
-                                                                btn-sm
-                                                                btn-white
-                                                                text-danger
-                                                                mr-2
-                                                                d-flex
-                                                            "
-                                                            ><i
-                                                                class="
-                                                                    far
-                                                                    fa-trash-alt
-                                                                    mr-1
-                                                                "
-                                                            ></i
-                                                            >Delete</a
                                                         >
                                                     </td>
                                                 </tr>
@@ -526,8 +488,8 @@
                                                     <td>19 Dec 2020</td>
                                                     <td>10:00am-12:00am</td>
                                                     <td>Diabeties</td>
-                                                    <td class="text-success">
-                                                        Approved
+                                                    <td class="text-primary">
+                                                        Accepted
                                                     </td>
                                                     <td
                                                         class="
@@ -553,25 +515,6 @@
                                                                 "
                                                             ></i>
                                                             Edit</a
-                                                        >
-                                                        <a
-                                                            href="javascript:void(0);"
-                                                            class="
-                                                                btn
-                                                                btn-sm
-                                                                btn-white
-                                                                text-danger
-                                                                mr-2
-                                                                d-flex
-                                                            "
-                                                            ><i
-                                                                class="
-                                                                    far
-                                                                    fa-trash-alt
-                                                                    mr-1
-                                                                "
-                                                            ></i
-                                                            >Delete</a
                                                         >
                                                     </td>
                                                 </tr>
@@ -597,8 +540,8 @@
                                                     <td>15 Dec 2020</td>
                                                     <td>10:00am-12:00am</td>
                                                     <td>Cold</td>
-                                                    <td class="text-success">
-                                                        Approved
+                                                    <td class="text-primary">
+                                                        Accepted
                                                     </td>
                                                     <td
                                                         class="
@@ -624,25 +567,6 @@
                                                                 "
                                                             ></i>
                                                             Edit</a
-                                                        >
-                                                        <a
-                                                            href="javascript:void(0);"
-                                                            class="
-                                                                btn
-                                                                btn-sm
-                                                                btn-white
-                                                                text-danger
-                                                                mr-2
-                                                                d-flex
-                                                            "
-                                                            ><i
-                                                                class="
-                                                                    far
-                                                                    fa-trash-alt
-                                                                    mr-1
-                                                                "
-                                                            ></i
-                                                            >Delete</a
                                                         >
                                                     </td>
                                                 </tr>
@@ -668,8 +592,8 @@
                                                     <td>11 Dec 2020</td>
                                                     <td>10:00am-12:00am</td>
                                                     <td>heart</td>
-                                                    <td class="text-success">
-                                                        Approved
+                                                    <td class="text-primary">
+                                                        Accepted
                                                     </td>
                                                     <td
                                                         class="
@@ -695,25 +619,6 @@
                                                                 "
                                                             ></i>
                                                             Edit</a
-                                                        >
-                                                        <a
-                                                            href="javascript:void(0);"
-                                                            class="
-                                                                btn
-                                                                btn-sm
-                                                                btn-white
-                                                                text-danger
-                                                                mr-2
-                                                                d-flex
-                                                            "
-                                                            ><i
-                                                                class="
-                                                                    far
-                                                                    fa-trash-alt
-                                                                    mr-1
-                                                                "
-                                                            ></i
-                                                            >Delete</a
                                                         >
                                                     </td>
                                                 </tr>
@@ -739,8 +644,8 @@
                                                     <td>5 Dec 2020</td>
                                                     <td>10:00am-12:00am</td>
                                                     <td>Diabeties</td>
-                                                    <td class="text-danger">
-                                                        Canceled
+                                                    <td class="text-primary">
+                                                        Accepted
                                                     </td>
                                                     <td
                                                         class="
@@ -766,25 +671,6 @@
                                                                 "
                                                             ></i>
                                                             Edit</a
-                                                        >
-                                                        <a
-                                                            href="javascript:void(0);"
-                                                            class="
-                                                                btn
-                                                                btn-sm
-                                                                btn-white
-                                                                text-danger
-                                                                mr-2
-                                                                d-flex
-                                                            "
-                                                            ><i
-                                                                class="
-                                                                    far
-                                                                    fa-trash-alt
-                                                                    mr-1
-                                                                "
-                                                            ></i
-                                                            >Delete</a
                                                         >
                                                     </td>
                                                 </tr>
@@ -808,8 +694,8 @@
                                                     <td>6 Jan 2020</td>
                                                     <td>10:00am-12:00am</td>
                                                     <td>Fever</td>
-                                                    <td class="text-success">
-                                                        Approved
+                                                    <td class="text-primary">
+                                                        Accepted
                                                     </td>
                                                     <td
                                                         class="
@@ -835,25 +721,6 @@
                                                                 "
                                                             ></i>
                                                             Edit</a
-                                                        >
-                                                        <a
-                                                            href="javascript:void(0);"
-                                                            class="
-                                                                btn
-                                                                btn-sm
-                                                                btn-white
-                                                                text-danger
-                                                                mr-2
-                                                                d-flex
-                                                            "
-                                                            ><i
-                                                                class="
-                                                                    far
-                                                                    fa-trash-alt
-                                                                    mr-1
-                                                                "
-                                                            ></i
-                                                            >Delete</a
                                                         >
                                                     </td>
                                                 </tr>
@@ -878,8 +745,8 @@
                                                     <td>15 Dec 2020</td>
                                                     <td>10:00am-12:00am</td>
                                                     <td>heart</td>
-                                                    <td class="text-success">
-                                                        Approved
+                                                    <td class="text-primary">
+                                                        Accepted
                                                     </td>
                                                     <td
                                                         class="
@@ -905,25 +772,6 @@
                                                                 "
                                                             ></i>
                                                             Edit</a
-                                                        >
-                                                        <a
-                                                            href="javascript:void(0);"
-                                                            class="
-                                                                btn
-                                                                btn-sm
-                                                                btn-white
-                                                                text-danger
-                                                                mr-2
-                                                                d-flex
-                                                            "
-                                                            ><i
-                                                                class="
-                                                                    far
-                                                                    fa-trash-alt
-                                                                    mr-1
-                                                                "
-                                                            ></i
-                                                            >Delete</a
                                                         >
                                                     </td>
                                                 </tr>

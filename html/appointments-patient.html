@@ -28,6 +28,12 @@
             href="assets/plugins/fontawesome/css/all.min.css"
         />
 
+        <!-- calendar CSS -->
+        <link
+            rel="stylesheet"
+            href="assets/plugins/simple-calendar/simple-calendar.css"
+        />
+
         <!-- Feathericon CSS -->
         <link rel="stylesheet" href="assets/css/feather.css" />
 
@@ -41,10 +47,10 @@
             <div class="header">
                 <!-- Logo -->
                 <div class="header-left">
-                    <a href="dashboard.html" class="logo">
+                    <a href="dashboard-patient.html" class="logo">
                         <img src="assets/img/logo.png" alt="Logo" />
                     </a>
-                    <a href="dashboard.html" class="logo logo-small">
+                    <a href="dashboard-patient.html" class="logo logo-small">
                         <img
                             src="assets/img/logo-small.png"
                             alt="Logo"
@@ -76,9 +82,6 @@
                 <!-- /Mobile Menu Toggle -->
                 <!-- Header Right Menu -->
                 <ul class="nav user-menu">
-                    <!-- Flag -->
-
-                    <!-- /Flag -->
                     <!-- Notifications -->
                     <li class="nav-item dropdown">
                         <a href="#" class="nav-link notifications-item">
@@ -86,11 +89,12 @@
                             <span class="badge badge-pill">3</span>
                         </a>
                     </li>
+
                     <!-- /Notifications -->
                     <!-- Chat -->
                     <li class="nav-item dropdown">
                         <a
-                            href="chat.html"
+                            href="chat-patient.html"
                             class="dropdown-toggle nav-link chat-header"
                         >
                             <i class="feather-message-square"></i>
@@ -116,10 +120,13 @@
                             <a class="dropdown-item" href="settings.html">
                                 <i class="feather-settings"></i>Settings
                             </a>
-                            <a class="dropdown-item" href="dashboard-patient.html">
-                                <i class="fas fa-user"></i>Patients View
+                            <a class="dropdown-item" href="dashboard.html">
+                                <i class="fas fa-user-md"></i>Doctor View
                             </a>
-                            <a class="dropdown-item" href="dashboard-admin.html">
+                            <a
+                                class="dropdown-item"
+                                href="dashboard-admin.html"
+                            >
                                 <i class="fas fa-user-cog"></i>Admins View
                             </a>
                             <a class="dropdown-item" href="index.html"
@@ -139,18 +146,20 @@
                         <ul>
                             <li class="menu-title"><span>Main</span></li>
                             <li>
-                                <a href="dashboard.html"
+                                <a href="dashboard-patient.html"
                                     ><i class="feather-home"></i
+                                    ><span class="shape1"></span
+                                    ><span class="shape2"></span
                                     ><span>Dashboard</span></a
                                 >
                             </li>
                             <li>
-                                <a href="patients.html">
-                                    <i class="feather-user"></i>
-                                    <span>Patients</span></a
+                                <a href="medical-history.html"
+                                    ><i class="fas fa-book-medical"></i>
+                                    <span>Medical History</span></a
                                 >
                             </li>
-                            <li class="submenu">
+                            <li class="submenu active">
                                 <a href="#"
                                     ><i class="feather-list"></i>
                                     <span>Appointments</span>
@@ -159,24 +168,26 @@
                                 </a>
                                 <ul style="display: none">
                                     <li>
-                                        <a href="appointments.html"
+                                        <a href="#" class="active"
                                             >Appointments list</a
                                         >
                                     </li>
                                     <li>
                                         <a href="appointments-requests.html"
-                                            >Appointments requests</a
+                                            >Request appointments</a
                                         >
-                                    </li>
-                                    <li>
-                                                                                <a href="appointments-schedule.html">Schedule appointments</a>
-
                                     </li>
                                 </ul>
                             </li>
 
                             <li>
-                                <a href="chat.html"
+                                <a href="calendar-patient.html"
+                                    ><i class="feather-calendar"></i>
+                                    <span>Calendar</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="chat-patient.html"
                                     ><i class="feather-message-circle"></i>
                                     <span>Messages</span
                                     ><span class="badge bg-orange-text"
@@ -184,181 +195,6 @@
                                     ></a
                                 >
                             </li>
-
-                            <li class="submenu active">
-                                <a href="javascript:void(0);"
-                                    ><i class="feather-book"></i
-                                    ><span class="shape1"></span
-                                    ><span class="shape2"></span>
-                                    <span>Reports</span>
-                                    <span class="menu-arrow"></span
-                                ></a>
-                                <ul style="display: none">
-                                    <li class="submenu">
-                                        <a href="javascript:void(0);">
-                                            <span>Clients</span>
-                                            <span class="menu-arrow"></span
-                                        ></a>
-                                        <ul style="display: none">
-                                            <li>
-                                                <a href="client-list.html"
-                                                    ><span>List</span></a
-                                                >
-                                            </li>
-                                            <li>
-                                                <a href="client-rx.html">
-                                                    <span>RX</span></a
-                                                >
-                                            </li>
-                                            <li>
-                                                <a href="patient-list.html">
-                                                    <span
-                                                        >Patient List
-                                                        Creation</span
-                                                    ></a
-                                                >
-                                            </li>
-                                            <li>
-                                                <a href="clinical-report.html">
-                                                    <span>Clinical</span></a
-                                                >
-                                            </li>
-                                            <li>
-                                                <a href="referals-report.html">
-                                                    <span>Reference</span></a
-                                                >
-                                            </li>
-                                            <li>
-                                                <a
-                                                    href="immunization-registry.html"
-                                                >
-                                                    <span
-                                                        >Immunization
-                                                        Registry</span
-                                                    ></a
-                                                >
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li class="submenu">
-                                        <a
-                                            href="javascript:void(0);"
-                                            class="active"
-                                        >
-                                            <span>Clinics</span>
-                                            <span class="menu-arrow"></span
-                                        ></a>
-                                        <ul style="display: none">
-                                            <li>
-                                                <a href="report-results.html"
-                                                    ><span
-                                                        >Report Results</span
-                                                    ></a
-                                                >
-                                            </li>
-                                            <li>
-                                                <a
-                                                    href="standard-measures.html"
-                                                >
-                                                    <span
-                                                        >Standard Measures</span
-                                                    ></a
-                                                >
-                                            </li>
-                                            <li>
-                                                <a href="quality-measures.html">
-                                                    <span
-                                                        >Quality Measures
-                                                        (CQM)</span
-                                                    ></a
-                                                >
-                                            </li>
-                                            <li>
-                                                <a
-                                                    href="automated-measures.html"
-                                                >
-                                                    <span
-                                                        >Automated Measures
-                                                        (AMC)</span
-                                                    ></a
-                                                >
-                                            </li>
-                                            <li>
-                                                <a href="amc-tracking.html">
-                                                    <span>AMC Tracking</span></a
-                                                >
-                                            </li>
-                                            <li>
-                                                <a
-                                                    href="alert-log.html"
-                                                    class="active"
-                                                >
-                                                    <span>Alerts Log</span></a
-                                                >
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li class="submenu">
-                                        <a href="javascript:void(0);">
-                                            <span>Visits</span>
-                                            <span class="menu-arrow"></span
-                                        ></a>
-                                        <ul style="display: none">
-                                            <li>
-                                                <a
-                                                    href="appointments-visit.html"
-                                                    ><span
-                                                        >Appointments</span
-                                                    ></a
-                                                >
-                                            </li>
-                                            <li>
-                                                <a
-                                                    href="flow-board-record.html"
-                                                >
-                                                    <span
-                                                        >Patient Flow
-                                                        Board</span
-                                                    ></a
-                                                >
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li class="submenu">
-                                        <a href="javascript:void(0);">
-                                            <span>Procedure</span>
-                                            <span class="menu-arrow"></span
-                                        ></a>
-                                        <ul style="display: none">
-                                            <li>
-                                                <a href="pending-orders.html"
-                                                    ><span>Pending Res</span></a
-                                                >
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li class="submenu">
-                                        <a href="javascript:void(0);">
-                                            <span>Insurance</span>
-                                            <span class="menu-arrow"></span
-                                        ></a>
-                                        <ul style="display: none">
-                                            <li>
-                                                <a href="unique-insurance.html"
-                                                    ><span>Unique SP</span></a
-                                                >
-                                            </li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </li>
-
-
-                                <a href="calendar.html"
-                                    ><i class="feather-grid"></i>
-                                    <span>Calendar</span>
-                            </a>                            </li>
-
                         </ul>
                     </div>
                 </div>
@@ -377,23 +213,26 @@
                                     <ul class="breadcrumb ml-2">
                                         <li class="breadcrumb-item">
                                             <a href="dashboard.html"
-                                                ><i cdashboard.htmlfa-home"></i
+                                                ><i class="fas fa-home"></i
                                             ></a>
                                         </li>
                                         <li class="breadcrumb-item">
                                             <a href="dashboard.html"
-                                                >Doctdashboard.htmlrd</a
+                                                >Dashboard</a
                                             >
                                         </li>
+                                        <li class="breadcrumb-item">
+                                            <a href="#">Appointments</a>
+                                        </li>
                                         <li class="breadcrumb-item active">
-                                            Alert Log
+                                            Appointments list
                                         </li>
                                     </ul>
                                 </div>
                             </div>
                             <div class="col-auto text-right">
                                 <a
-                                    class="btn btn-white filter-btn mr-3"
+                                    class="btn btn-white filter-btn"
                                     href="javascript:void(0);"
                                     id="filter_search"
                                 >
@@ -434,7 +273,7 @@
                                     </div>
                                     <div class="col-sm-6 col-md-4">
                                         <div class="form-group">
-                                            <label>Category</label>
+                                            <label>Date</label>
                                             <input
                                                 class="form-control"
                                                 type="text"
@@ -453,23 +292,74 @@
                             <div class="card">
                                 <div class="card-body">
                                     <div class="table-responsive">
-                                        <table class="table mb-0">
+                                        <table class="table">
                                             <thead>
                                                 <tr>
+                                                    <th>ID</th>
+                                                    <th>Patient Name</th>
+                                                    <th>Age</th>
                                                     <th>Date</th>
                                                     <th>Time</th>
-                                                    <th>ID</th>
-                                                    <th>Patient</th>
-                                                    <th>Category</th>
-                                                    <th>All Alerts</th>
-                                                    <th>New Alerts</th>
+                                                    <th>Disease</th>
+                                                    <th>Status</th>
+                                                    <th>Action</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
                                                 <tr>
-                                                    <td>17 Dec 2020</td>
-                                                    <td>11:25am</td>
-                                                    <td>EMR233</td>
+                                                    <td>APT0001</td>
+                                                    <td>
+                                                        <a
+                                                            href="patients-profile.html"
+                                                            ><img
+                                                                width="28"
+                                                                height="28"
+                                                                src="assets/img/profiles/avatar-07.jpg"
+                                                                class="
+                                                                    rounded-circle
+                                                                    m-r-5
+                                                                "
+                                                                alt=""
+                                                            />
+                                                            Brandon Stone</a
+                                                        >
+                                                    </td>
+                                                    <td>39</td>
+                                                    <td>11 Dec 2020</td>
+                                                    <td>10:00am-12:00am</td>
+                                                    <td>Cold</td>
+                                                    <td class="text-success">
+                                                        Completed
+                                                    </td>
+                                                    <td
+                                                        class="
+                                                            text-right
+                                                            d-flex
+                                                        "
+                                                    >
+                                                        <a
+                                                            href="#"
+                                                            class="
+                                                                btn
+                                                                btn-sm
+                                                                btn-white
+                                                                text-success
+                                                                mr-2
+                                                                d-flex
+                                                            "
+                                                            ><i
+                                                                class="
+                                                                    far
+                                                                    fa-edit
+                                                                    mr-1
+                                                                "
+                                                            ></i>
+                                                            Edit</a
+                                                        >
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>APT0002</td>
                                                     <td>
                                                         <a
                                                             href="patients-profile.html"
@@ -486,20 +376,42 @@
                                                             Terry Baker</a
                                                         >
                                                     </td>
-                                                    <td>Passive Alert</td>
-                                                    <td>
-                                                        Assessment: Colon Cancer
-                                                        Screening (Past Due)
+                                                    <td>29</td>
+                                                    <td>5 Dec 2020</td>
+                                                    <td>10:00am-12:00am</td>
+                                                    <td>Fever</td>
+                                                    <td class="text-warning">
+                                                        Delayed
                                                     </td>
-                                                    <td>
-                                                        Measurement: Mammogram
-                                                        (Past Due)
+                                                    <td
+                                                        class="
+                                                            text-right
+                                                            d-flex
+                                                        "
+                                                    >
+                                                        <a
+                                                            href="#"
+                                                            class="
+                                                                btn
+                                                                btn-sm
+                                                                btn-white
+                                                                text-success
+                                                                mr-2
+                                                                d-flex
+                                                            "
+                                                            ><i
+                                                                class="
+                                                                    far
+                                                                    fa-edit
+                                                                    mr-1
+                                                                "
+                                                            ></i>
+                                                            Edit</a
+                                                        >
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td>30 Dec 2020</td>
-                                                    <td>08:00am</td>
-                                                    <td>EMR346</td>
+                                                    <td>APT0003</td>
                                                     <td>
                                                         <a
                                                             href="patients-profile.html"
@@ -516,20 +428,42 @@
                                                             Kyle Woodbury</a
                                                         >
                                                     </td>
-                                                    <td>Passive Alert</td>
-                                                    <td>
-                                                        Assessment: Colon Cancer
-                                                        Screening (Past Due)
+                                                    <td>42</td>
+                                                    <td>6 Jan 2020</td>
+                                                    <td>10:00am-12:00am</td>
+                                                    <td>heart</td>
+                                                    <td class="text-primary">
+                                                        Accepted
                                                     </td>
-                                                    <td>
-                                                        Measurement: Mammogram
-                                                        (Past Due)
+                                                    <td
+                                                        class="
+                                                            text-right
+                                                            d-flex
+                                                        "
+                                                    >
+                                                        <a
+                                                            href="#"
+                                                            class="
+                                                                btn
+                                                                btn-sm
+                                                                btn-white
+                                                                text-success
+                                                                mr-2
+                                                                d-flex
+                                                            "
+                                                            ><i
+                                                                class="
+                                                                    far
+                                                                    fa-edit
+                                                                    mr-1
+                                                                "
+                                                            ></i>
+                                                            Edit</a
+                                                        >
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td>21 Nov 2020</td>
-                                                    <td>10:15am</td>
-                                                    <td>EMR244</td>
+                                                    <td>APT0004</td>
                                                     <td>
                                                         <a
                                                             href="patients-profile.html"
@@ -546,20 +480,42 @@
                                                             Marie Gallardo</a
                                                         >
                                                     </td>
-                                                    <td>Passive Alert</td>
-                                                    <td>
-                                                        Assessment: Colon Cancer
-                                                        Screening (Past Due)
+                                                    <td>23</td>
+                                                    <td>19 Dec 2020</td>
+                                                    <td>10:00am-12:00am</td>
+                                                    <td>Diabeties</td>
+                                                    <td class="text-primary">
+                                                        Accepted
                                                     </td>
-                                                    <td>
-                                                        Measurement: Mammogram
-                                                        (Past Due)
+                                                    <td
+                                                        class="
+                                                            text-right
+                                                            d-flex
+                                                        "
+                                                    >
+                                                        <a
+                                                            href="#"
+                                                            class="
+                                                                btn
+                                                                btn-sm
+                                                                btn-white
+                                                                text-success
+                                                                mr-2
+                                                                d-flex
+                                                            "
+                                                            ><i
+                                                                class="
+                                                                    far
+                                                                    fa-edit
+                                                                    mr-1
+                                                                "
+                                                            ></i>
+                                                            Edit</a
+                                                        >
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td>11 Jan 2021</td>
-                                                    <td>10:10am</td>
-                                                    <td>EMR789</td>
+                                                    <td>APT0005</td>
                                                     <td>
                                                         <a
                                                             href="patients-profile.html"
@@ -576,20 +532,42 @@
                                                             Maurice Guz</a
                                                         >
                                                     </td>
-                                                    <td>Passive Alert</td>
-                                                    <td>
-                                                        Assessment: Tobacco
-                                                        (Past Due)
+                                                    <td>55</td>
+                                                    <td>15 Dec 2020</td>
+                                                    <td>10:00am-12:00am</td>
+                                                    <td>Cold</td>
+                                                    <td class="text-primary">
+                                                        Accepted
                                                     </td>
-                                                    <td>
-                                                        Measurement: Blood
-                                                        Pressure (Past Due)
+                                                    <td
+                                                        class="
+                                                            text-right
+                                                            d-flex
+                                                        "
+                                                    >
+                                                        <a
+                                                            href="#"
+                                                            class="
+                                                                btn
+                                                                btn-sm
+                                                                btn-white
+                                                                text-success
+                                                                mr-2
+                                                                d-flex
+                                                            "
+                                                            ><i
+                                                                class="
+                                                                    far
+                                                                    fa-edit
+                                                                    mr-1
+                                                                "
+                                                            ></i>
+                                                            Edit</a
+                                                        >
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td>18 Dec 2020</td>
-                                                    <td>09:00am</td>
-                                                    <td>EMR562</td>
+                                                    <td>APT0006</td>
                                                     <td>
                                                         <a
                                                             href="patients-profile.html"
@@ -606,20 +584,42 @@
                                                             Julia Sims</a
                                                         >
                                                     </td>
-                                                    <td>Passive Alert</td>
-                                                    <td>
-                                                        Assessment: Tobacco
-                                                        (Past Due)
+                                                    <td>39</td>
+                                                    <td>11 Dec 2020</td>
+                                                    <td>10:00am-12:00am</td>
+                                                    <td>heart</td>
+                                                    <td class="text-primary">
+                                                        Accepted
                                                     </td>
-                                                    <td>
-                                                        Measurement: Weight
-                                                        (Past Due)
+                                                    <td
+                                                        class="
+                                                            text-right
+                                                            d-flex
+                                                        "
+                                                    >
+                                                        <a
+                                                            href="#"
+                                                            class="
+                                                                btn
+                                                                btn-sm
+                                                                btn-white
+                                                                text-success
+                                                                mr-2
+                                                                d-flex
+                                                            "
+                                                            ><i
+                                                                class="
+                                                                    far
+                                                                    fa-edit
+                                                                    mr-1
+                                                                "
+                                                            ></i>
+                                                            Edit</a
+                                                        >
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td>15 Nov 202</td>
-                                                    <td>11:25am</td>
-                                                    <td>EMR863</td>
+                                                    <td>APT0007</td>
                                                     <td>
                                                         <a
                                                             href="patients-profile.html"
@@ -636,14 +636,139 @@
                                                             Linda Carp</a
                                                         >
                                                     </td>
-                                                    <td>Passive Alert</td>
-                                                    <td>
-                                                        Assessment: Colon Cancer
-                                                        Screening (Past Due)
+                                                    <td>29</td>
+                                                    <td>5 Dec 2020</td>
+                                                    <td>10:00am-12:00am</td>
+                                                    <td>Diabeties</td>
+                                                    <td class="text-primary">
+                                                        Accepted
                                                     </td>
+                                                    <td
+                                                        class="
+                                                            text-right
+                                                            d-flex
+                                                        "
+                                                    >
+                                                        <a
+                                                            href="#"
+                                                            class="
+                                                                btn
+                                                                btn-sm
+                                                                btn-white
+                                                                text-success
+                                                                mr-2
+                                                                d-flex
+                                                            "
+                                                            ><i
+                                                                class="
+                                                                    far
+                                                                    fa-edit
+                                                                    mr-1
+                                                                "
+                                                            ></i>
+                                                            Edit</a
+                                                        >
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>APT0008</td>
                                                     <td>
-                                                        Measurement: Mammogram
-                                                        (Past Due)
+                                                        <a
+                                                            href="patients-profile.html"
+                                                            ><img
+                                                                src="assets/img/profiles/avatar-08.jpg"
+                                                                class="
+                                                                    rounded-circle
+                                                                    m-r-5
+                                                                    profile-img
+                                                                "
+                                                                alt=""
+                                                            />Joshua Maurice</a
+                                                        >
+                                                    </td>
+                                                    <td>42</td>
+                                                    <td>6 Jan 2020</td>
+                                                    <td>10:00am-12:00am</td>
+                                                    <td>Fever</td>
+                                                    <td class="text-primary">
+                                                        Accepted
+                                                    </td>
+                                                    <td
+                                                        class="
+                                                            text-right
+                                                            d-flex
+                                                        "
+                                                    >
+                                                        <a
+                                                            href="#"
+                                                            class="
+                                                                btn
+                                                                btn-sm
+                                                                btn-white
+                                                                text-success
+                                                                mr-2
+                                                                d-flex
+                                                            "
+                                                            ><i
+                                                                class="
+                                                                    far
+                                                                    fa-edit
+                                                                    mr-1
+                                                                "
+                                                            ></i>
+                                                            Edit</a
+                                                        >
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>APT0009</td>
+                                                    <td>
+                                                        <a
+                                                            href="patients-profile.html"
+                                                            ><img
+                                                                src="assets/img/profiles/avatar-10.jpg"
+                                                                class="
+                                                                    rounded-circle
+                                                                    m-r-5
+                                                                    profile-img
+                                                                "
+                                                                alt=""
+                                                            />
+                                                            Charles Clements</a
+                                                        >
+                                                    </td>
+                                                    <td>55</td>
+                                                    <td>15 Dec 2020</td>
+                                                    <td>10:00am-12:00am</td>
+                                                    <td>heart</td>
+                                                    <td class="text-primary">
+                                                        Accepted
+                                                    </td>
+                                                    <td
+                                                        class="
+                                                            text-right
+                                                            d-flex
+                                                        "
+                                                    >
+                                                        <a
+                                                            href="#"
+                                                            class="
+                                                                btn
+                                                                btn-sm
+                                                                btn-white
+                                                                text-success
+                                                                mr-2
+                                                                d-flex
+                                                            "
+                                                            ><i
+                                                                class="
+                                                                    far
+                                                                    fa-edit
+                                                                    mr-1
+                                                                "
+                                                            ></i>
+                                                            Edit</a
+                                                        >
                                                     </td>
                                                 </tr>
                                             </tbody>

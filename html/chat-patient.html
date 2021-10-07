@@ -37,10 +37,10 @@
             <div class="header">
                 <!-- Logo -->
                 <div class="header-left">
-                    <a href="dashboard.html" class="logo">
+                    <a href="dashboard-patient.html" class="logo">
                         <img src="assets/img/logo.png" alt="Logo" />
                     </a>
-                    <a href="dashboard.html" class="logo logo-small">
+                    <a href="dashboard-patient.html" class="logo logo-small">
                         <img
                             src="assets/img/logo-small.png"
                             alt="Logo"
@@ -72,9 +72,6 @@
                 <!-- /Mobile Menu Toggle -->
                 <!-- Header Right Menu -->
                 <ul class="nav user-menu">
-                    <!-- Flag -->
-
-                    <!-- /Flag -->
                     <!-- Notifications -->
                     <li class="nav-item dropdown">
                         <a href="#" class="nav-link notifications-item">
@@ -82,11 +79,12 @@
                             <span class="badge badge-pill">3</span>
                         </a>
                     </li>
+
                     <!-- /Notifications -->
                     <!-- Chat -->
                     <li class="nav-item dropdown">
                         <a
-                            href="chat.html"
+                            href="chat-patient.html"
                             class="dropdown-toggle nav-link chat-header"
                         >
                             <i class="feather-message-square"></i>
@@ -112,11 +110,8 @@
                             <a class="dropdown-item" href="settings.html">
                                 <i class="feather-settings"></i>Settings
                             </a>
-                            <a
-                                class="dropdown-item"
-                                href="dashboard-patient.html"
-                            >
-                                <i class="fas fa-user"></i>Patients View
+                            <a class="dropdown-item" href="dashboard.html">
+                                <i class="fas fa-user-md"></i>Doctor View
                             </a>
                             <a
                                 class="dropdown-item"
@@ -141,15 +136,17 @@
                         <ul>
                             <li class="menu-title"><span>Main</span></li>
                             <li>
-                                <a href="dashboard.html"
+                                <a href="dashboard-patient.html"
                                     ><i class="feather-home"></i
+                                    ><span class="shape1"></span
+                                    ><span class="shape2"></span
                                     ><span>Dashboard</span></a
                                 >
                             </li>
                             <li>
-                                <a href="patients.html"
-                                    ><i class="feather-user"></i>
-                                    <span>Patients</span></a
+                                <a href="medical-history.html"
+                                    ><i class="fas fa-book-medical"></i>
+                                    <span>Medical History</span></a
                                 >
                             </li>
                             <li class="submenu">
@@ -161,37 +158,32 @@
                                 </a>
                                 <ul style="display: none">
                                     <li>
-                                        <a href="appointments.html"
+                                        <a href="appointments-patient.html"
                                             >Appointments list</a
                                         >
                                     </li>
                                     <li>
                                         <a href="appointments-requests.html"
-                                            >Appointments requests</a
-                                        >
-                                    </li>
-                                    <li>
-                                        <a href="appointments-schedule.html"
-                                            >Schedule appointments</a
+                                            >Request appointments</a
                                         >
                                     </li>
                                 </ul>
                             </li>
 
                             <li>
-                                <a href="calendar.html"
+                                <a href="calendar-patient.html"
                                     ><i class="feather-calendar"></i>
                                     <span>Calendar</span>
                                 </a>
                             </li>
-
                             <li class="active">
-                                <a href="chat.html"
-                                    ><i class="feather-message-circle"></i
-                                    ><span class="shape1"></span
-                                    ><span class="shape2"></span>
-                                    <span>Messages</span>
-                                </a>
+                                <a href="chat-patient.html"
+                                    ><i class="feather-message-circle"></i>
+                                    <span>Messages</span
+                                    ><span class="badge bg-orange-text"
+                                        >4</span
+                                    ></a
+                                >
                             </li>
                         </ul>
                     </div>

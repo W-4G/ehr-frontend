@@ -28,17 +28,14 @@
             href="assets/plugins/fontawesome/css/all.min.css"
         />
 
-        <!-- Feathericon CSS -->
-        <link rel="stylesheet" href="assets/css/feather.css" />
-
-        <!-- Select2 CSS -->
-        <link rel="stylesheet" href="assets/css/select2.min.css" />
-
-        <!-- Datepicker CSS -->
+        <!-- calendar CSS -->
         <link
             rel="stylesheet"
-            href="assets/css/bootstrap-datetimepicker.min.css"
+            href="assets/plugins/simple-calendar/simple-calendar.css"
         />
+
+        <!-- Feathericon CSS -->
+        <link rel="stylesheet" href="assets/css/feather.css" />
 
         <!-- Main CSS -->
         <link rel="stylesheet" href="assets/css/style.css" />
@@ -50,7 +47,7 @@
             <div class="header">
                 <!-- Logo -->
                 <div class="header-left">
-                    <a href="dashboard.html" class="logo">
+                    <a href="dashboard-patient.html" class="logo">
                         <img src="assets/img/logo.png" alt="Logo" />
                     </a>
                     <a href="dashboard.html" class="logo logo-small">
@@ -85,9 +82,6 @@
                 <!-- /Mobile Menu Toggle -->
                 <!-- Header Right Menu -->
                 <ul class="nav user-menu">
-                    <!-- Flag -->
-
-                    <!-- /Flag -->
                     <!-- Notifications -->
                     <li class="nav-item dropdown">
                         <a href="#" class="nav-link notifications-item">
@@ -95,11 +89,12 @@
                             <span class="badge badge-pill">3</span>
                         </a>
                     </li>
+
                     <!-- /Notifications -->
                     <!-- Chat -->
                     <li class="nav-item dropdown">
                         <a
-                            href="chat.html"
+                            href="chat-patient.html"
                             class="dropdown-toggle nav-link chat-header"
                         >
                             <i class="feather-message-square"></i>
@@ -125,7 +120,16 @@
                             <a class="dropdown-item" href="settings.html">
                                 <i class="feather-settings"></i>Settings
                             </a>
-                            <a class="dropdown-item" href="login.html"
+                            <a class="dropdown-item" href="dashboard.html">
+                                <i class="fas fa-user"></i>Doctor View
+                            </a>
+                            <a
+                                class="dropdown-item"
+                                href="dashboard-admin.html"
+                            >
+                                <i class="fas fa-user-cog"></i>Admins View
+                            </a>
+                            <a class="dropdown-item" href="index.html"
                                 ><i class="feather-power"></i> Logout</a
                             >
                         </div>
@@ -142,96 +146,55 @@
                         <ul>
                             <li class="menu-title"><span>Main</span></li>
                             <li>
-                                <a href="dashboard.html"
-                                    ><i class="feather-home"></i>
-                                    <span>Back to Home</span></a
+                                <a href="dashboard-patient.html"
+                                    ><i class="feather-home"></i
+                                    ><span class="shape1"></span
+                                    ><span class="shape2"></span
+                                    ><span>Dashboard</span></a
+                                >
+                            </li>
+                            <li class="active">
+                                <a href="#"
+                                    ><i class="fas fa-book-medical"></i>
+                                    <span>Medical History</span></a
                                 >
                             </li>
                             <li class="submenu">
                                 <a href="#"
-                                    ><i class="feather-user"></i
-                                    ><span> Patients</span>
-                                    <span class="menu-arrow"></span
-                                ></a>
+                                    ><i class="feather-list"></i>
+                                    <span>Appointments</span>
+                                    <span class="menu-arrow"></span>
+                                    <!-- <span class="badge bg-success-text">2</span> -->
+                                </a>
                                 <ul style="display: none">
                                     <li>
-                                        <a href="patients-profile.html"
-                                            >Patient Profile</a
-                                        >
-                                    </li>
-                                    <li>
-                                        <a href="patients-history.html"
-                                            >History</a
-                                        >
-                                    </li>
-                                    <li>
-                                        <a href="patients-report.html"
-                                            >Report</a
-                                        >
-                                    </li>
-                                    <li>
-                                        <a href="patients-documents.html"
-                                            >Documents</a
-                                        >
-                                    </li>
-                                    <li>
-                                        <a href="patients-transactions.html"
-                                            >Transactions</a
-                                        >
-                                    </li>
-                                    <li>
-                                        <a href="patients-issues.html"
-                                            >Issues</a
-                                        >
-                                    </li>
-                                    <li>
-                                        <a href="patients-data.html"
-                                            >External Data</a
-                                        >
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="submenu">
-                                <a href="#"
-                                    ><i class="feather-eye"></i>
-                                    <span> Visits</span>
-                                    <span class="menu-arrow"></span
-                                ></a>
-                                <ul style="display: none">
-                                    <li>
-                                        <a href="create-visit.html"
-                                            >Create Visit</a
-                                        >
-                                    </li>
-                                    <li>
-                                        <a href="visit-history.html"
-                                            >Visit History</a
-                                        >
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="submenu active">
-                                <a href="#"
-                                    ><i class="feather-crosshair"></i
-                                    ><span class="shape1"></span
-                                    ><span class="shape2"></span>
-                                    <span> Procedures</span>
-                                    <span class="menu-arrow"></span
-                                ></a>
-                                <ul style="display: none">
-                                    <li>
-                                        <a href="pending-review.html"
-                                            >Pending Review</a
+                                        <a href="appointments-patient.html"
+                                            >Appointments list</a
                                         >
                                     </li>
                                     <li>
                                         <a
-                                            href="patients-results.html"
-                                            class="active"
-                                            >Patient Results</a
+                                            href="appointments-requests.html"
+                                            >Request appointments</a
                                         >
                                     </li>
                                 </ul>
+                            </li>
+
+                            <li>
+                                <a href="calendar-patient.html"
+                                    ><i class="feather-calendar"></i>
+                                    <span>Calendar</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="chat-patient.html"
+                                    ><i class="feather-message-circle"></i>
+                                    <span>Messages</span
+                                    ><span class="badge bg-orange-text"
+                                        >4</span
+                                    ></a
+                                >
                             </li>
                         </ul>
                     </div>
@@ -245,28 +208,92 @@
                     <!-- Page Header -->
                     <div class="page-header">
                         <div class="row align-items-center">
-                            <div class="col-md-12">
+                            <div class="col">
                                 <div class="d-flex align-items-center">
                                     <h5 class="page-title">Dashboard</h5>
                                     <ul class="breadcrumb ml-2">
                                         <li class="breadcrumb-item">
-                                            <a href="dashboard.html"
+                                            <a href="dashboard-patient.html"
                                                 ><i class="fas fa-home"></i
                                             ></a>
                                         </li>
                                         <li class="breadcrumb-item">
-                                            <a href="dashboard.html"
-                                                >Doctor Dashboard</a
+                                            <a href="dashboard-patient.html"
+                                                >Dashboard</a
                                             >
                                         </li>
                                         <li class="breadcrumb-item active">
-                                            Patient Results
+                                            Medical History</a>
                                         </li>
                                     </ul>
                                 </div>
                             </div>
+                            <div class="col-auto text-right">
+                                <a
+                                    class="btn btn-white filter-btn"
+                                    href="javascript:void(0);"
+                                    id="filter_search"
+                                >
+                                    <i class="feather-filter"></i>
+                                </a>
+                            </div>
                         </div>
                     </div>
+                    <!-- Search Filter -->
+                    <form action="#" method="post" id="filter_inputs">
+                        <input
+                            type="hidden"
+                            name="csrf_token_name"
+                            value="4a0efd10c152f3f6117fec6b1be8e87e"
+                        />
+                        <div class="card filter-card">
+                            <div class="card-body pb-0">
+                                <div class="row filter-row">
+                                    <div class="col-sm-6 col-md-3">
+                                        <div class="form-group">
+                                            <label>Patient ID</label>
+                                            <input
+                                                class="form-control"
+                                                type="text"
+                                                name="from"
+                                            />
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6 col-md-3">
+                                        <div class="form-group">
+                                            <label>Patient Name</label>
+                                            <input
+                                                class="form-control"
+                                                type="text"
+                                                name="from"
+                                            />
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6 col-md-3">
+                                        <div class="form-group">
+                                            <label>Name</label>
+                                            <input
+                                                class="form-control"
+                                                type="text"
+                                                name="to"
+                                            />
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6 col-md-3">
+                                        <div class="form-group">
+                                            <label>Encounter ID</label>
+                                            <input
+                                                class="form-control"
+                                                type="text"
+                                                name="to"
+                                            />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                    <!-- /Search Filter -->
                     <!-- /Page Header -->
                     <div class="row">
                         <div class="col-sm-12">
@@ -277,112 +304,151 @@
                                             <thead>
                                                 <tr>
                                                     <th>Date</th>
-                                                    <th>Procedure Name</th>
-                                                    <th>Reported</th>
-                                                    <th>Ext Time Collected</th>
-                                                    <th>Status</th>
-                                                    <th>Code</th>
+                                                    <th>Name</th>
+                                                    <th>Patient</th>
+                                                    <th>Appointment Notes</th>
+                                                    <th>Encounter ID</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
                                                 <tr>
-                                                    <td>11 Dec 2020</td>
-                                                    <td>
-                                                        consectetur adipiscing
-                                                    </td>
-                                                    <td>Dr.Jay Soni</td>
-                                                    <td>5hrs 20min</td>
-                                                    <td>
-                                                        <span
-                                                            class="
-                                                                badge
-                                                                bg-success-light
-                                                            "
-                                                            >Approved</span
-                                                        >
-                                                    </td>
-                                                    <td class="text-info">
-                                                        CPT4 - 99202
-                                                    </td>
-                                                </tr>
-                                                <tr>
                                                     <td>5 Dec 2020</td>
+                                                    <td>Blood Test</td>
                                                     <td>
-                                                        consectetur adipiscing
-                                                    </td>
-                                                    <td>Dr.John Deo</td>
-                                                    <td>3hrs 15min</td>
-                                                    <td>
-                                                        <span
-                                                            class="
-                                                                badge
-                                                                bg-danger-light
-                                                            "
-                                                            >Declined</span
+                                                        <a
+                                                            href="patients-profile.html"
+                                                            ><img
+                                                                width="28"
+                                                                height="28"
+                                                                src="assets/img/profiles/avatar-07.jpg"
+                                                                class="
+                                                                    rounded-circle
+                                                                    m-r-5
+                                                                "
+                                                                alt=""
+                                                            />
+                                                            Brandon Stone</a
                                                         >
                                                     </td>
+                                                    <td>
+                                                        Lorem ipsum dolor sit
+                                                        amet, consectetur
+                                                        adipiscing
+                                                    </td>
                                                     <td class="text-info">
-                                                        ICD9 - 296.20
+                                                        87ED3W
                                                     </td>
                                                 </tr>
                                                 <tr>
                                                     <td>6 Jan 2020</td>
+                                                    <td>CCR</td>
                                                     <td>
-                                                        consectetur adipiscing
-                                                    </td>
-                                                    <td>Dr.John Deo</td>
-                                                    <td>0hrs 50min</td>
-                                                    <td>
-                                                        <span
-                                                            class="
-                                                                badge
-                                                                bg-success-light
-                                                            "
-                                                            >Approved</span
+                                                        <a
+                                                            href="patients-profile.html"
+                                                            ><img
+                                                                width="28"
+                                                                height="28"
+                                                                src="assets/img/profiles/avatar-06.jpg"
+                                                                class="
+                                                                    rounded-circle
+                                                                    m-r-5
+                                                                "
+                                                                alt=""
+                                                            />
+                                                            Terry Baker</a
                                                         >
                                                     </td>
+                                                    <td>
+                                                        Lorem ipsum dolor sit
+                                                        amet, consectetur
+                                                        adipiscing
+                                                    </td>
                                                     <td class="text-info">
-                                                        ICD9 - 125.10
+                                                        E354MA
                                                     </td>
                                                 </tr>
                                                 <tr>
                                                     <td>19 Dec 2020</td>
+                                                    <td>CCD</td>
                                                     <td>
-                                                        consectetur adipiscing
-                                                    </td>
-                                                    <td>Dr.Sarah Smith</td>
-                                                    <td>5hrs 12min</td>
-                                                    <td>
-                                                        <span
-                                                            class="
-                                                                badge
-                                                                bg-success-light
-                                                            "
-                                                            >Approved</span
+                                                        <a
+                                                            href="patients-profile.html"
+                                                            ><img
+                                                                width="28"
+                                                                height="28"
+                                                                src="assets/img/profiles/avatar-04.jpg"
+                                                                class="
+                                                                    rounded-circle
+                                                                    m-r-5
+                                                                "
+                                                                alt=""
+                                                            />
+                                                            Kyle Woodbury</a
                                                         >
                                                     </td>
+                                                    <td>
+                                                        Lorem ipsum dolor sit
+                                                        amet, consectetur
+                                                        adipiscing
+                                                    </td>
                                                     <td class="text-info">
-                                                        CPT4 - 4589
+                                                        Y87D34
                                                     </td>
                                                 </tr>
                                                 <tr>
                                                     <td>15 Dec 2020</td>
+                                                    <td>Procedures</td>
                                                     <td>
-                                                        consectetur adipiscing
-                                                    </td>
-                                                    <td>Dr.Jay Soni</td>
-                                                    <td>2hrs 25min</td>
-                                                    <td>
-                                                        <span
-                                                            class="
-                                                                badge
-                                                                bg-warning-light
-                                                            "
-                                                            >Pending</span
+                                                        <a
+                                                            href="patients-profile.html"
+                                                            ><img
+                                                                width="28"
+                                                                height="28"
+                                                                src="assets/img/profiles/avatar-05.jpg"
+                                                                class="
+                                                                    rounded-circle
+                                                                    m-r-5
+                                                                "
+                                                                alt=""
+                                                            />
+                                                            Marie Gallardo</a
                                                         >
                                                     </td>
+                                                    <td>
+                                                        Lorem ipsum dolor sit
+                                                        amet, consectetur
+                                                        adipiscing
+                                                    </td>
                                                     <td class="text-info">
-                                                        ICD9 - 435.60
+                                                        895SW4
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>11 Dec 2020</td>
+                                                    <td>Thyroid Test</td>
+                                                    <td>
+                                                        <a
+                                                            href="patients-profile.html"
+                                                            ><img
+                                                                width="28"
+                                                                height="28"
+                                                                src="assets/img/profiles/avatar-03.jpg"
+                                                                class="
+                                                                    rounded-circle
+                                                                    m-r-5
+                                                                "
+                                                                alt=""
+                                                            />
+                                                            Maurice Guz</a
+                                                        >
+                                                    </td>
+                                                    <td>
+                                                        Lorem ipsum dolor sit
+                                                        amet, consectetur
+                                                        adipiscing
+                                                    </td>
+                                                    <td class="text-info">
+                                                        SD231F
                                                     </td>
                                                 </tr>
                                             </tbody>
@@ -565,7 +631,7 @@
                     </ul>
                 </div>
                 <div class="topnav-dropdown-footer">
-                    <a href="#">View all Notifications</a>
+                    <a href="javascript:void(0);">View all Notifications</a>
                 </div>
             </div>
             <!-- /Notification -->
@@ -578,15 +644,16 @@
         <!-- Bootstrap Core JS -->
         <script src="assets/js/bootstrap.bundle.min.js"></script>
 
-        <!-- Datepicker Core JS -->
-        <script src="assets/plugins/moment/moment.min.js"></script>
-        <script src="assets/js/bootstrap-datetimepicker.min.js"></script>
-
         <!-- Slimscroll JS -->
         <script src="assets/plugins/slimscroll/jquery.slimscroll.min.js"></script>
 
-        <!-- Select2 JS -->
-        <script src="assets/js/select2.min.js"></script>
+        <!-- Chart JS -->
+        <script src="assets/plugins/apexchart/apexcharts.min.js"></script>
+        <script src="assets/plugins/apexchart/dsh-apaxcharts.js"></script>
+
+        <!-- calendar Js -->
+        <script src="assets/plugins/simple-calendar/jquery.simple-calendar.js"></script>
+        <script src="assets/js/calander.js"></script>
 
         <!-- Custom JS -->
         <script src="assets/js/script.js"></script>
