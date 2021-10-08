@@ -14,8 +14,8 @@
             type="image/x-icon"
             href="assets/img/favicon.png"
         />
-
         <!-- Bootstrap CSS -->
+
         <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
 
         <!-- Fontawesome CSS -->
@@ -28,10 +28,16 @@
             href="assets/plugins/fontawesome/css/all.min.css"
         />
 
-        <!-- calendar CSS -->
+        <!-- Full Calander CSS -->
         <link
             rel="stylesheet"
-            href="assets/plugins/simple-calendar/simple-calendar.css"
+            href="assets/plugins/fullcalendar/fullcalendar.min.css"
+        />
+
+        <!-- Datetimepicker CSS -->
+        <link
+            rel="stylesheet"
+            href="assets/css/bootstrap-datetimepicker.min.css"
         />
 
         <!-- Feathericon CSS -->
@@ -82,6 +88,9 @@
                 <!-- /Mobile Menu Toggle -->
                 <!-- Header Right Menu -->
                 <ul class="nav user-menu">
+                    <!-- Flag -->
+
+                    <!-- /Flag -->
                     <!-- Notifications -->
                     <li class="nav-item dropdown">
                         <a href="#" class="nav-link notifications-item">
@@ -89,7 +98,6 @@
                             <span class="badge badge-pill">3</span>
                         </a>
                     </li>
-
                     <!-- /Notifications -->
                     <!-- Chat -->
                     <li class="nav-item dropdown">
@@ -146,20 +154,20 @@
                     <div id="sidebar-menu" class="sidebar-menu">
                         <ul>
                             <li class="menu-title"><span>Main</span></li>
-                            <li class="active">
+                            <li>
                                 <a href="dashboard-admin.html"
                                     ><i class="feather-home"></i
-                                    ><span class="shape1"></span
-                                    ><span class="shape2"></span
                                     ><span>Dashboard</span></a
                                 >
                             </li>
+
                             <li>
                                 <a href="doctors-admin.html"
                                     ><i class="fas fa-user-md"></i>
                                     <span>Doctors</span></a
                                 >
                             </li>
+
                             <li>
                                 <a href="patients-admin.html"
                                     ><i class="feather-user"></i>
@@ -167,12 +175,13 @@
                                 >
                             </li>
 
-                            <li>
+                            <li class="active">
                                 <a href="calendar-admin.html"
                                     ><i class="feather-calendar"></i>
                                     <span>Calendar</span>
                                 </a>
                             </li>
+
                             <li>
                                 <a href="chat-admin.html"
                                     ><i class="feather-message-circle"></i>
@@ -191,318 +200,295 @@
             <!-- Page Wrapper -->
             <div class="page-wrapper">
                 <div class="content container-fluid">
-                    <div class="row">
-                        <div class="col-12 col-md-6 col-lg-4 d-flex flex-wrap">
-                            <div class="card detail-box1 details-box">
-                                <div class="card-body">
-                                    <div class="dash-contetnt">
-                                        <div class="mb-3">
-                                            <img
-                                                src="assets/img/icons/accident.svg"
-                                                alt=""
-                                                width="26"
-                                            />
-                                        </div>
-                                        <h4 class="text-white">
-                                            Total Patients
-                                        </h4>
-                                        <h2 class="text-white">245</h2>
-                                        <div class="growth-indicator">
-                                            <span class="text-white"
-                                                ><i
-                                                    class="
-                                                        fas
-                                                        fa-angle-double-up
-                                                        mr-1
-                                                    "
-                                                ></i>
-                                                (14.25%)</span
+                    <!-- Page Header -->
+                    <div class="page-header">
+                        <div class="row align-items-center">
+                            <div class="col">
+                                <div class="d-flex align-items-center">
+                                    <h5 class="page-title">Dashboard</h5>
+                                    <ul class="breadcrumb ml-2">
+                                        <li class="breadcrumb-item">
+                                            <a href="dashboard-admin.html"
+                                                ><i class="fas fa-home"></i
+                                            ></a>
+                                        </li>
+                                        <li class="breadcrumb-item">
+                                            <a href="dashboard-admin.html"
+                                                >Dashboard</a
                                             >
-                                        </div>
-                                    </div>
+                                        </li>
+                                        <li class="breadcrumb-item active">
+                                            Calendar
+                                        </li>
+                                    </ul>
                                 </div>
                             </div>
+                            <div
+                                class="col-auto text-right float-right ml-auto"
+                            >
+                                <a
+                                    href="#"
+                                    class="btn btn-primary"
+                                    data-toggle="modal"
+                                    data-target="#add_event"
+                                    >Create Event</a
+                                >
+                            </div>
                         </div>
+                    </div>
+                    <!-- /Page Header -->
 
-                        <div class="col-12 col-md-6 col-lg-4 d-flex flex-wrap">
-                            <div class="card detail-box3 details-box">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-4">
+                            <h4 class="card-title">Drag & Drop Event</h4>
+                            <div id="calendar-events" class="mb-3">
+                                <div
+                                    class="calendar-events"
+                                    data-class="bg-info"
+                                >
+                                    <i class="fas fa-circle text-info"></i> My
+                                    Event One
+                                </div>
+                                <div
+                                    class="calendar-events"
+                                    data-class="bg-success"
+                                >
+                                    <i class="fas fa-circle text-success"></i>
+                                    My Event Two
+                                </div>
+                                <div
+                                    class="calendar-events"
+                                    data-class="bg-danger"
+                                >
+                                    <i class="fas fa-circle text-danger"></i> My
+                                    Event Three
+                                </div>
+                                <div
+                                    class="calendar-events"
+                                    data-class="bg-warning"
+                                >
+                                    <i class="fas fa-circle text-warning"></i>
+                                    My Event Four
+                                </div>
+                            </div>
+                            <div class="checkbox mb-3">
+                                <input id="drop-remove" type="checkbox" />
+                                <label for="drop-remove">
+                                    Remove after drop
+                                </label>
+                            </div>
+                            <a
+                                href="#"
+                                data-toggle="modal"
+                                data-target="#add_new_event"
+                                class="btn mb-3 btn-primary btn-block"
+                            >
+                                <i class="fas fa-plus"></i> Add Category
+                            </a>
+                        </div>
+                        <div class="col-lg-9 col-md-8">
+                            <div class="card bg-white">
                                 <div class="card-body">
-                                    <div class="dash-contetnt">
-                                        <div class="mb-3">
-                                            <img
-                                                src="assets/img/icons/hospital-bed.svg"
-                                                alt=""
-                                                width="26"
+                                    <div id="calendar"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Add Event Modal -->
+                    <div
+                        id="add_event"
+                        class="modal custom-modal fade"
+                        role="dialog"
+                    >
+                        <div
+                            class="modal-dialog modal-dialog-centered"
+                            role="document"
+                        >
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title">Add Event</h5>
+                                    <button
+                                        type="button"
+                                        class="close"
+                                        data-dismiss="modal"
+                                        aria-label="Close"
+                                    >
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <form>
+                                        <div class="form-group">
+                                            <label
+                                                >Event Name
+                                                <span class="text-danger"
+                                                    >*</span
+                                                ></label
+                                            >
+                                            <input
+                                                class="form-control"
+                                                type="text"
                                             />
                                         </div>
-                                        <h4 class="text-white">
-                                            Total Doctors
-                                        </h4>
-                                        <h2 class="text-white">124</h2>
-                                        <div class="growth-indicator">
-                                            <span class="text-white"
-                                                ><i
+                                        <div class="form-group">
+                                            <label
+                                                >Event Date
+                                                <span class="text-danger"
+                                                    >*</span
+                                                ></label
+                                            >
+                                            <div class="cal-icon">
+                                                <input
                                                     class="
-                                                        fas
-                                                        fa-angle-double-up
-                                                        mr-1
+                                                        form-control
+                                                        datetimepicker
                                                     "
-                                                ></i>
-                                                (18.32%)</span
-                                            >
+                                                    type="text"
+                                                />
+                                            </div>
                                         </div>
-                                    </div>
+                                        <div class="submit-section">
+                                            <button
+                                                class="
+                                                    btn btn-primary
+                                                    submit-btn
+                                                "
+                                            >
+                                                Submit
+                                            </button>
+                                        </div>
+                                    </form>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="row calender-col">
-                        <div class="col-xl-4">
-                            <div class="card">
-                                <div class="card-header">
-                                    <h4 class="card-title">Schedule</h4>
-                                </div>
-                                <div class="card-body">
-                                    <div
-                                        id="calendar-doctor"
-                                        class="calendar-container"
-                                    ></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-4 d-flex flex-wrap">
-                            <div class="card">
-                                <div class="card-header no-border">
-                                    <h4 class="card-title float-left">
-                                        Doctors Group
-                                    </h4>
-                                    <span class="float-right"
-                                        ><a href="doctors-admin.html"
-                                            >View all</a
-                                        ></span
+                    <!-- /Add Event Modal -->
+
+                    <!-- Add Event Modal -->
+                    <div
+                        class="modal custom-modal fade none-border"
+                        id="my_event"
+                    >
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h4 class="modal-title">Add Event</h4>
+                                    <button
+                                        type="button"
+                                        class="close"
+                                        data-dismiss="modal"
+                                        aria-hidden="true"
                                     >
+                                        &times;
+                                    </button>
                                 </div>
-                                <div class="card-body">
-                                    <div class="table-responsive">
-                                        <table class="table mb-0">
-                                            <thead>
-                                                <tr>
-                                                    <th>Medical speciality</th>
-                                                    <th class="text-right pt-0">
-                                                        Count
-                                                    </th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td>Neurosurgery</td>
-                                                    <td
-                                                        class="
-                                                            text-right text-fade
-                                                        "
-                                                    >
-                                                        5 Doctors
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Infectology</td>
-                                                    <td
-                                                        class="
-                                                            text-right text-fade
-                                                        "
-                                                    >
-                                                        14 Doctors
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>General Surgery</td>
-                                                    <td
-                                                        class="
-                                                            text-right text-fade
-                                                        "
-                                                    >
-                                                        10 Doctors
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Internal Medicine</td>
-                                                    <td
-                                                        class="
-                                                            text-right text-fade
-                                                        "
-                                                    >
-                                                        21 Doctors
-                                                    </td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-4 d-flex flex-wrap">
-                            <div class="card">
-                                <div class="card-header no-border">
-                                    <h4 class="card-title float-left">
-                                        Patients Group
-                                    </h4>
-                                    <span class="float-right"
-                                        ><a href="patients-admin.html"
-                                            >View all</a
-                                        ></span
-                                    >
-                                </div>
-                                <div class="card-body">
-                                    <div class="table-responsive">
-                                        <table class="table mb-0">
-                                            <thead>
-                                                <tr>
-                                                    <th>Issues</th>
-                                                    <th class="text-right pt-0">
-                                                        Count
-                                                    </th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td>Cholesterol</td>
-                                                    <td
-                                                        class="
-                                                            text-right text-fade
-                                                        "
-                                                    >
-                                                        5 Patients
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Diabetic</td>
-                                                    <td
-                                                        class="
-                                                            text-right text-fade
-                                                        "
-                                                    >
-                                                        14 Patients
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Blood Pressure</td>
-                                                    <td
-                                                        class="
-                                                            text-right text-fade
-                                                        "
-                                                    >
-                                                        10 Patients
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Hypertension</td>
-                                                    <td
-                                                        class="
-                                                            text-right text-fade
-                                                        "
-                                                    >
-                                                        21 Patients
-                                                    </td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-12 d-flex">
-                        <div class="card flex-fill">
-                            <div class="card-header">
+                                <div class="modal-body"></div>
                                 <div
-                                    class="
-                                        d-flex
-                                        justify-content-between
-                                        align-items-center
-                                    "
+                                    class="modal-footer justify-content-center"
                                 >
-                                    <h5 class="card-title">Patients Count</h5>
-                                    <div
-                                        class="dropdown"
-                                        data-toggle="dropdown"
-                                    >
-                                        <a
-                                            href="javascript:void(0);"
-                                            class="
-                                                btn btn-white btn-sm
-                                                dropdown-toggle
-                                            "
-                                            role="button"
-                                            data-toggle="dropdown"
-                                        >
-                                            This Week
-                                        </a>
-                                        <div
-                                            class="
-                                                dropdown-menu
-                                                dropdown-menu-right
-                                            "
-                                        >
-                                            <a
-                                                href="javascript:void(0);"
-                                                class="dropdown-item"
-                                                >Today</a
-                                            >
-                                            <a
-                                                href="javascript:void(0);"
-                                                class="dropdown-item"
-                                                >This Week</a
-                                            >
-                                            <a
-                                                href="javascript:void(0);"
-                                                class="dropdown-item"
-                                                >This Month</a
-                                            >
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card-body">
-                                <div
-                                    class="
-                                        d-flex
-                                        align-items-center
-                                        justify-content-between
-                                        flex-wrap flex-md-nowrap
-                                    "
-                                >
-                                    <div
+                                    <button
+                                        type="button"
                                         class="
-                                            w-100
-                                            d-md-flex
-                                            align-items-center
-                                            mb-3
-                                            chart-count
+                                            btn btn-success
+                                            save-event
+                                            submit-btn
                                         "
                                     >
-                                        <div class="mr-3 text-center">
-                                            <span>Total Appointments</span>
-                                            <p class="h4 text-primary">584</p>
-                                        </div>
-                                        <div class="mr-3 text-center">
-                                            <span>Old Patients</span>
-                                            <p class="h4 text-success">320</p>
-                                        </div>
-                                        <div class="mr-3 text-center">
-                                            <span>New Patients</span>
-                                            <p class="h4 text-warning">264</p>
-                                        </div>
-                                    </div>
+                                        Create event
+                                    </button>
+                                    <button
+                                        type="button"
+                                        class="
+                                            btn btn-danger
+                                            delete-event
+                                            submit-btn
+                                        "
+                                        data-dismiss="modal"
+                                    >
+                                        Delete
+                                    </button>
                                 </div>
-                                <div id="dsh_chart_ex_column"></div>
                             </div>
                         </div>
                     </div>
+                    <!-- /Add Event Modal -->
 
-                    <div class="row"></div>
+                    <!-- Add Category Modal -->
+                    <div class="modal custom-modal fade" id="add_new_event">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h4 class="modal-title">Add Category</h4>
+                                    <button
+                                        type="button"
+                                        class="close"
+                                        data-dismiss="modal"
+                                        aria-hidden="true"
+                                    >
+                                        &times;
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <form>
+                                        <div class="form-group">
+                                            <label>Category Name</label>
+                                            <input
+                                                class="form-control form-white"
+                                                placeholder="Enter name"
+                                                type="text"
+                                                name="category-name"
+                                            />
+                                        </div>
+                                        <div class="form-group mb-0">
+                                            <label>Choose Category Color</label>
+                                            <select
+                                                class="form-control form-white"
+                                                data-placeholder="Choose a color..."
+                                                name="category-color"
+                                            >
+                                                <option value="success">
+                                                    Success
+                                                </option>
+                                                <option value="danger">
+                                                    Danger
+                                                </option>
+                                                <option value="info">
+                                                    Info
+                                                </option>
+                                                <option value="primary">
+                                                    Primary
+                                                </option>
+                                                <option value="warning">
+                                                    Warning
+                                                </option>
+                                                <option value="inverse">
+                                                    Inverse
+                                                </option>
+                                            </select>
+                                        </div>
+                                        <div class="submit-section">
+                                            <button
+                                                type="button"
+                                                class="
+                                                    btn btn-primary
+                                                    save-category
+                                                    submit-btn
+                                                "
+                                                data-dismiss="modal"
+                                            >
+                                                Save
+                                            </button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /Add Category Modal -->
                 </div>
             </div>
-            <!-- /Page Wrapper -->
+            <!-- /Main Wrapper -->
 
             <!-- Notification -->
             <div class="notifications">
@@ -689,13 +675,14 @@
         <!-- Slimscroll JS -->
         <script src="assets/plugins/slimscroll/jquery.slimscroll.min.js"></script>
 
-        <!-- Chart JS -->
-        <script src="assets/plugins/apexchart/apexcharts.min.js"></script>
-        <script src="assets/plugins/apexchart/dsh-apaxcharts.js"></script>
+        <!-- Datetimepicker JS -->
+        <script src="assets/plugins/moment/moment.min.js"></script>
+        <script src="assets/js/bootstrap-datetimepicker.min.js"></script>
 
-        <!-- calendar Js -->
-        <script src="assets/plugins/simple-calendar/jquery.simple-calendar.js"></script>
-        <script src="assets/js/calander.js"></script>
+        <!-- Full Calendar JS -->
+        <script src="assets/js/jquery-ui.min.js"></script>
+        <script src="assets/plugins/fullcalendar/fullcalendar.min.js"></script>
+        <script src="assets/plugins/fullcalendar/jquery.fullcalendar.js"></script>
 
         <!-- Custom JS -->
         <script src="assets/js/script.js"></script>

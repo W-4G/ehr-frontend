@@ -41,10 +41,10 @@
             <div class="header">
                 <!-- Logo -->
                 <div class="header-left">
-                    <a href="dashboard.html" class="logo">
+                    <a href="dashboard-admin.html" class="logo">
                         <img src="assets/img/logo.png" alt="Logo" />
                     </a>
-                    <a href="dashboard.html" class="logo logo-small">
+                    <a href="dashboard-admin.html" class="logo logo-small">
                         <img
                             src="assets/img/logo-small.png"
                             alt="Logo"
@@ -110,12 +110,22 @@
                             ></span>
                         </a>
                         <div class="dropdown-menu">
-                            <a class="dropdown-item" href="profile.html"
+                            <a class="dropdown-item" href="profile-admin.html"
                                 ><i class="feather-user"></i> My Profile</a
                             >
-                            <a class="dropdown-item" href="settings.html">
+                            <a class="dropdown-item" href="settings-admin.html">
                                 <i class="feather-settings"></i>Settings
                             </a>
+                            <a
+                                class="dropdown-item"
+                                href="dashboard-patient.html"
+                            >
+                                <i class="fas fa-user"></i>Patients View
+                            </a>
+                            <a class="dropdown-item" href="dashboard.html">
+                                <i class="fas fa-user-md"></i>Doctors View
+                            </a>
+
                             <a class="dropdown-item" href="index.html"
                                 ><i class="feather-power"></i> Logout</a
                             >
@@ -133,53 +143,34 @@
                         <ul>
                             <li class="menu-title"><span>Main</span></li>
                             <li>
-                                <a href="dashboard.html"
+                                <a href="dashboard-admin.html"
                                     ><i class="feather-home"></i
                                     ><span>Dashboard</span></a
                                 >
                             </li>
-                            <li class="submenu active">
-                                <a href="patients.html"
+                            <li>
+                                <a href="doctors-admin.html"
+                                    ><i class="fas fa-user-md"></i>
+                                    <span>Doctors</span></a
+                                >
+                            </li>
+                            <li class="active">
+                                <a href="patients-admin.html"
                                     ><i class="feather-user"></i
                                     ><span class="shape1"></span
                                     ><span class="shape2"></span>
                                     <span>Patients</span></a
                                 >
                             </li>
-                            <li class="submenu">
-                                <a href="#"
-                                    ><i class="feather-list"></i>
-                                    <span>Appointments</span>
-                                    <span class="menu-arrow"></span>
-                                    <!-- <span class="badge bg-success-text">2</span> -->
-                                </a>
-                                <ul style="display: none">
-                                    <li>
-                                        <a href="appointments.html"
-                                            >Appointments list</a
-                                        >
-                                    </li>
-                                    <li>
-                                        <a href="appointments-requests.html"
-                                            >Appointments requests</a
-                                        >
-                                    </li>
-                                    <li>
-                                        <a href="appointments-schedule.html"
-                                            >Schedule appointments</a
-                                        >
-                                    </li>
-                                </ul>
-                            </li>
 
                             <li>
-                                <a href="calendar.html"
+                                <a href="calendar-admin.html"
                                     ><i class="feather-calendar"></i>
                                     <span>Calendar</span>
                                 </a>
                             </li>
                             <li>
-                                <a href="chat.html"
+                                <a href="chat-admin.html"
                                     ><i class="feather-message-circle"></i>
                                     <span>Messages</span
                                     ><span class="badge bg-orange-text"
@@ -204,17 +195,19 @@
                                     <h5 class="page-title">Dashboard</h5>
                                     <ul class="breadcrumb ml-2">
                                         <li class="breadcrumb-item">
-                                            <a href="dashboard.html"
+                                            <a href="dashboard-admin.html"
                                                 ><i class="fas fa-home"></i
                                             ></a>
                                         </li>
                                         <li class="breadcrumb-item">
-                                            <a href="dashboard.html"
+                                            <a href="dashboard-admin.html"
                                                 >Dashboard</a
                                             >
                                         </li>
                                         <li class="breadcrumb-item">
-                                            <a href="patients.html">Patients</a>
+                                            <a href="patients-admin.html"
+                                                >Patients</a
+                                            >
                                         </li>
                                         <li class="breadcrumb-item active">
                                             Add Patient
@@ -230,7 +223,7 @@
                         <div class="col-sm-12">
                             <div class="card">
                                 <div class="card-body">
-                                    <form action="#">
+                                    <form action="patients-admin.html">
                                         <h5 class="card-title">
                                             Personal Information
                                         </h5>

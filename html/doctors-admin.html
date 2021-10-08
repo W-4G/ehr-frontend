@@ -28,12 +28,6 @@
             href="assets/plugins/fontawesome/css/all.min.css"
         />
 
-        <!-- calendar CSS -->
-        <link
-            rel="stylesheet"
-            href="assets/plugins/simple-calendar/simple-calendar.css"
-        />
-
         <!-- Feathericon CSS -->
         <link rel="stylesheet" href="assets/css/feather.css" />
 
@@ -47,10 +41,10 @@
             <div class="header">
                 <!-- Logo -->
                 <div class="header-left">
-                    <a href="dashboard-patient.html" class="logo">
+                    <a href="dashboard-admin.html" class="logo">
                         <img src="assets/img/logo.png" alt="Logo" />
                     </a>
-                    <a href="dashboard-patient.html" class="logo logo-small">
+                    <a href="dashboard-admin.html" class="logo logo-small">
                         <img
                             src="assets/img/logo-small.png"
                             alt="Logo"
@@ -82,6 +76,9 @@
                 <!-- /Mobile Menu Toggle -->
                 <!-- Header Right Menu -->
                 <ul class="nav user-menu">
+                    <!-- Flag -->
+
+                    <!-- /Flag -->
                     <!-- Notifications -->
                     <li class="nav-item dropdown">
                         <a href="#" class="nav-link notifications-item">
@@ -89,12 +86,11 @@
                             <span class="badge badge-pill">3</span>
                         </a>
                     </li>
-
                     <!-- /Notifications -->
                     <!-- Chat -->
                     <li class="nav-item dropdown">
                         <a
-                            href="chat-patient.html"
+                            href="chat-admin.html"
                             class="dropdown-toggle nav-link chat-header"
                         >
                             <i class="feather-message-square"></i>
@@ -114,21 +110,22 @@
                             ></span>
                         </a>
                         <div class="dropdown-menu">
-                            <a class="dropdown-item" href="profile-patient.html"
+                            <a class="dropdown-item" href="profile-admin.html"
                                 ><i class="feather-user"></i> My Profile</a
                             >
-                            <a class="dropdown-item" href="settings.html">
+                            <a class="dropdown-item" href="settings-admin.html">
                                 <i class="feather-settings"></i>Settings
-                            </a>
-                            <a class="dropdown-item" href="dashboard.html">
-                                <i class="fas fa-user-md"></i>Doctor View
                             </a>
                             <a
                                 class="dropdown-item"
-                                href="dashboard-admin.html"
+                                href="dashboard-patient.html"
                             >
-                                <i class="fas fa-user-cog"></i>Admins View
+                                <i class="fas fa-user"></i>Patients View
                             </a>
+                            <a class="dropdown-item" href="dashboard.html">
+                                <i class="fas fa-user-md"></i>Doctors View
+                            </a>
+
                             <a class="dropdown-item" href="index.html"
                                 ><i class="feather-power"></i> Logout</a
                             >
@@ -146,48 +143,31 @@
                         <ul>
                             <li class="menu-title"><span>Main</span></li>
                             <li>
-                                <a href="dashboard-patient.html"
+                                <a href="dashboard-admin.html"
                                     ><i class="feather-home"></i
-                                    ><span class="shape1"></span
-                                    ><span class="shape2"></span
                                     ><span>Dashboard</span></a
                                 >
                             </li>
-                            <li>
-                                <a href="medical-history.html"
-                                    ><i class="fas fa-book-medical"></i>
-                                    <span>Medical History</span></a
+                            <li class="submenu active">
+                                <a href="doctors-admin.html"
+                                    ><i class="fas fa-user-md"></i>
+                                    <span>Doctors</span></a
                                 >
                             </li>
-                            <li class="submenu active">
-                                <a href="#"
-                                    ><i class="feather-list"></i>
-                                    <span>Appointments</span>
-                                    <span class="menu-arrow"></span>
-                                    <!-- <span class="badge bg-success-text">2</span> -->
-                                </a>
-                                <ul style="display: none">
-                                    <li>
-                                        <a href="#" class="active"
-                                            >Appointments list</a
-                                        >
-                                    </li>
-                                    <li>
-                                        <a href="appointments-requests.html"
-                                            >Request appointments</a
-                                        >
-                                    </li>
-                                </ul>
-                            </li>
-
                             <li>
-                                <a href="calendar-patient.html"
+                                <a href="patients-admin.html"
+                                    ><i class="feather-user"></i>
+                                    <span>Patients</span></a
+                                >
+                            </li>
+                            <li>
+                                <a href="calendar-admin.html"
                                     ><i class="feather-calendar"></i>
                                     <span>Calendar</span>
                                 </a>
                             </li>
                             <li>
-                                <a href="chat-patient.html"
+                                <a href="chat-admin.html"
                                     ><i class="feather-message-circle"></i>
                                     <span>Messages</span
                                     ><span class="badge bg-orange-text"
@@ -221,14 +201,19 @@
                                                 >Dashboard</a
                                             >
                                         </li>
-                                        <li class="breadcrumb-item">
-                                            <a href="#">Appointments</a>
-                                        </li>
                                         <li class="breadcrumb-item active">
-                                            Appointments list
+                                            Doctors
                                         </li>
                                     </ul>
                                 </div>
+                            </div>
+                            <div class="col-auto text-right">
+                                <a
+                                    class="btn btn-primary"
+                                    href="add-doctor.html"
+                                >
+                                    Add Doctor
+                                </a>
                             </div>
                             <div class="col-auto text-right">
                                 <a
@@ -251,7 +236,7 @@
                         <div class="card filter-card">
                             <div class="card-body pb-0">
                                 <div class="row filter-row">
-                                    <div class="col-sm-6 col-md-4">
+                                    <div class="col-sm-6 col-md-3">
                                         <div class="form-group">
                                             <label>Doctor ID</label>
                                             <input
@@ -261,7 +246,7 @@
                                             />
                                         </div>
                                     </div>
-                                    <div class="col-sm-6 col-md-4">
+                                    <div class="col-sm-6 col-md-3">
                                         <div class="form-group">
                                             <label>Doctor Name</label>
                                             <input
@@ -271,9 +256,19 @@
                                             />
                                         </div>
                                     </div>
-                                    <div class="col-sm-6 col-md-4">
+                                    <div class="col-sm-6 col-md-3">
                                         <div class="form-group">
-                                            <label>Date</label>
+                                            <label>Mobile Number</label>
+                                            <input
+                                                class="form-control"
+                                                type="text"
+                                                name="to"
+                                            />
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6 col-md-3">
+                                        <div class="form-group">
+                                            <label>Email Id</label>
                                             <input
                                                 class="form-control"
                                                 type="text"
@@ -292,71 +287,38 @@
                             <div class="card">
                                 <div class="card-body">
                                     <div class="table-responsive">
-                                        <table class="table">
+                                        <table class="table mb-0">
                                             <thead>
                                                 <tr>
-                                                    <th>ID</th>
-                                                    <th>Doctor Name</th>
-                                                    <th>Date</th>
-                                                    <th>Time</th>
-                                                    <th>Status</th>
-                                                    <th>Action</th>
+                                                    <th class="text-center">
+                                                        ID
+                                                    </th>
+                                                    <th>Name</th>
+                                                    <th class="text-center">
+                                                        Age
+                                                    </th>
+                                                    <th class="text-center">
+                                                        Medical speciality
+                                                    </th>
+                                                    <th class="text-center">
+                                                        Address
+                                                    </th>
+                                                    <th class="text-center">
+                                                        Phone
+                                                    </th>
+                                                    <th class="text-center">
+                                                        Email
+                                                    </th>
+                                                    <th class="text-center">
+                                                        Action
+                                                    </th>
                                                 </tr>
                                             </thead>
                                             <tbody>
                                                 <tr>
-                                                    <td>APT0001</td>
-                                                    <td>
-                                                        <a
-                                                            href="patients-profile.html"
-                                                            ><img
-                                                                width="28"
-                                                                height="28"
-                                                                src="assets/img/profiles/avatar-07.jpg"
-                                                                class="
-                                                                    rounded-circle
-                                                                    m-r-5
-                                                                "
-                                                                alt=""
-                                                            />
-                                                            Brandon Stone</a
-                                                        >
+                                                    <td class="text-center">
+                                                        EMR125
                                                     </td>
-
-                                                    <td>11 Dec 2020</td>
-                                                    <td>10:00am-12:00am</td>
-                                                    <td class="text-success">
-                                                        Completed
-                                                    </td>
-                                                    <td
-                                                        class="
-                                                            text-right
-                                                            d-flex
-                                                        "
-                                                    >
-                                                        <a
-                                                            href="#"
-                                                            class="
-                                                                btn
-                                                                btn-sm
-                                                                btn-white
-                                                                text-success
-                                                                mr-2
-                                                                d-flex
-                                                            "
-                                                            ><i
-                                                                class="
-                                                                    far
-                                                                    fa-edit
-                                                                    mr-1
-                                                                "
-                                                            ></i>
-                                                            Request</a
-                                                        >
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>APT0002</td>
                                                     <td>
                                                         <a
                                                             href="patients-profile.html"
@@ -373,40 +335,48 @@
                                                             Terry Baker</a
                                                         >
                                                     </td>
-                                                    <td>5 Dec 2020</td>
-                                                    <td>10:00am-12:00am</td>
-                                                    <td class="text-warning">
-                                                        Delayed
+                                                    <td class="text-center">
+                                                        35
                                                     </td>
-                                                    <td
-                                                        class="
-                                                            text-right
-                                                            d-flex
-                                                        "
-                                                    >
+                                                    <td class="text-center">
+                                                        Neurosurgery
+                                                    </td>
+                                                    <td class="text-center">
+                                                        5578 Dorsey NC, United
+                                                        States
+                                                    </td>
+                                                    <td class="text-center">
+                                                        (207) 808 8863
+                                                    </td>
+                                                    <td class="text-center">
+                                                        Brandon
+                                                        Stone@example.com
+                                                    </td>
+                                                    <td class="text-center">
                                                         <a
-                                                            href="#"
+                                                            href="patients-profile.html"
                                                             class="
                                                                 btn
                                                                 btn-sm
                                                                 btn-white
                                                                 text-success
                                                                 mr-2
-                                                                d-flex
                                                             "
                                                             ><i
                                                                 class="
-                                                                    far
-                                                                    fa-edit
+                                                                    fas
+                                                                    fa-eye
                                                                     mr-1
                                                                 "
                                                             ></i>
-                                                            Request</a
+                                                            View</a
                                                         >
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td>APT0003</td>
+                                                    <td class="text-center">
+                                                        EMR233
+                                                    </td>
                                                     <td>
                                                         <a
                                                             href="patients-profile.html"
@@ -423,40 +393,47 @@
                                                             Kyle Woodbury</a
                                                         >
                                                     </td>
-                                                    <td>6 Jan 2020</td>
-                                                    <td>10:00am-12:00am</td>
-                                                    <td class="text-primary">
-                                                        Accepted
+                                                    <td class="text-center">
+                                                        23
                                                     </td>
-                                                    <td
-                                                        class="
-                                                            text-right
-                                                            d-flex
-                                                        "
-                                                    >
+                                                    <td class="text-center">
+                                                        Infectology
+                                                    </td>
+                                                    <td class="text-center">
+                                                        223 2H, Hempstead,
+                                                        United States
+                                                    </td>
+                                                    <td class="text-center">
+                                                        (376) 150 6975
+                                                    </td>
+                                                    <td class="text-center">
+                                                        terry@example.com
+                                                    </td>
+                                                    <td class="text-center">
                                                         <a
-                                                            href="#"
+                                                            href="patients-profile.html"
                                                             class="
                                                                 btn
                                                                 btn-sm
                                                                 btn-white
                                                                 text-success
                                                                 mr-2
-                                                                d-flex
                                                             "
                                                             ><i
                                                                 class="
-                                                                    far
-                                                                    fa-edit
+                                                                    fas
+                                                                    fa-eye
                                                                     mr-1
                                                                 "
                                                             ></i>
-                                                            Request</a
+                                                            View</a
                                                         >
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td>APT0004</td>
+                                                    <td class="text-center">
+                                                        EMR346
+                                                    </td>
                                                     <td>
                                                         <a
                                                             href="patients-profile.html"
@@ -473,40 +450,48 @@
                                                             Marie Gallardo</a
                                                         >
                                                     </td>
-                                                    <td>19 Dec 2020</td>
-                                                    <td>10:00am-12:00am</td>
-                                                    <td class="text-primary">
-                                                        Accepted
+                                                    <td class="text-center">
+                                                        17
                                                     </td>
-                                                    <td
-                                                        class="
-                                                            text-right
-                                                            d-flex
-                                                        "
-                                                    >
+                                                    <td class="text-center">
+                                                        Infectology
+                                                    </td>
+                                                    <td class="text-center">
+                                                        2321 #APT 207, Vero
+                                                        Beach, United States
+                                                    </td>
+                                                    <td class="text-center">
+                                                        (981) 756 6128
+                                                    </td>
+                                                    <td class="text-center">
+                                                        Kyle
+                                                        Woodbury@example.com
+                                                    </td>
+                                                    <td class="text-center">
                                                         <a
-                                                            href="#"
+                                                            href="patients-profile.html"
                                                             class="
                                                                 btn
                                                                 btn-sm
                                                                 btn-white
                                                                 text-success
                                                                 mr-2
-                                                                d-flex
                                                             "
                                                             ><i
                                                                 class="
-                                                                    far
-                                                                    fa-edit
+                                                                    fas
+                                                                    fa-eye
                                                                     mr-1
                                                                 "
                                                             ></i>
-                                                            Request</a
+                                                            View</a
                                                         >
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td>APT0005</td>
+                                                    <td class="text-center">
+                                                        EMR244
+                                                    </td>
                                                     <td>
                                                         <a
                                                             href="patients-profile.html"
@@ -523,40 +508,48 @@
                                                             Maurice Guz</a
                                                         >
                                                     </td>
-                                                    <td>15 Dec 2020</td>
-                                                    <td>10:00am-12:00am</td>
-                                                    <td class="text-primary">
-                                                        Accepted
+                                                    <td class="text-center">
+                                                        22
                                                     </td>
-                                                    <td
-                                                        class="
-                                                            text-right
-                                                            d-flex
-                                                        "
-                                                    >
+                                                    <td class="text-center">
+                                                        Internal Medicine
+                                                    </td>
+                                                    <td class="text-center">
+                                                        2344 Columbia, United
+                                                        States
+                                                    </td>
+                                                    <td class="text-center">
+                                                        (634) 09 3833
+                                                    </td>
+                                                    <td class="text-center">
+                                                        Marie
+                                                        Gallardo@example.com
+                                                    </td>
+                                                    <td class="text-center">
                                                         <a
-                                                            href="#"
+                                                            href="patients-profile.html"
                                                             class="
                                                                 btn
                                                                 btn-sm
                                                                 btn-white
                                                                 text-success
                                                                 mr-2
-                                                                d-flex
                                                             "
                                                             ><i
                                                                 class="
-                                                                    far
-                                                                    fa-edit
+                                                                    fas
+                                                                    fa-eye
                                                                     mr-1
                                                                 "
                                                             ></i>
-                                                            Request</a
+                                                            View</a
                                                         >
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td>APT0006</td>
+                                                    <td class="text-center">
+                                                        EMR789
+                                                    </td>
                                                     <td>
                                                         <a
                                                             href="patients-profile.html"
@@ -573,40 +566,48 @@
                                                             Julia Sims</a
                                                         >
                                                     </td>
-                                                    <td>11 Dec 2020</td>
-                                                    <td>10:00am-12:00am</td>
-                                                    <td class="text-primary">
-                                                        Accepted
+                                                    <td class="text-center">
+                                                        29
                                                     </td>
-                                                    <td
-                                                        class="
-                                                            text-right
-                                                            d-flex
-                                                        "
-                                                    >
+                                                    <td class="text-center">
+                                                        Internal Medicine
+                                                    </td>
+                                                    <td class="text-center">
+                                                        4712 Spring Creek Dr,
+                                                        Washington
+                                                    </td>
+                                                    <td class="text-center">
+                                                        (407) 554 4146
+                                                    </td>
+                                                    <td class="text-center">
+                                                        Joshua
+                                                        Maurice@example.com
+                                                    </td>
+                                                    <td class="text-center">
                                                         <a
-                                                            href="#"
+                                                            href="patients-profile.html"
                                                             class="
                                                                 btn
                                                                 btn-sm
                                                                 btn-white
                                                                 text-success
                                                                 mr-2
-                                                                d-flex
                                                             "
                                                             ><i
                                                                 class="
-                                                                    far
-                                                                    fa-edit
+                                                                    fas
+                                                                    fa-eye
                                                                     mr-1
                                                                 "
                                                             ></i>
-                                                            Request</a
+                                                            View</a
                                                         >
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td>APT0007</td>
+                                                    <td class="text-center">
+                                                        EMR562
+                                                    </td>
                                                     <td>
                                                         <a
                                                             href="patients-profile.html"
@@ -623,132 +624,40 @@
                                                             Linda Carp</a
                                                         >
                                                     </td>
-                                                    <td>5 Dec 2020</td>
-                                                    <td>10:00am-12:00am</td>
-                                                    <td class="text-primary">
-                                                        Accepted
+                                                    <td class="text-center">
+                                                        27
                                                     </td>
-                                                    <td
-                                                        class="
-                                                            text-right
-                                                            d-flex
-                                                        "
-                                                    >
-                                                        <a
-                                                            href="#"
-                                                            class="
-                                                                btn
-                                                                btn-sm
-                                                                btn-white
-                                                                text-success
-                                                                mr-2
-                                                                d-flex
-                                                            "
-                                                            ><i
-                                                                class="
-                                                                    far
-                                                                    fa-edit
-                                                                    mr-1
-                                                                "
-                                                            ></i>
-                                                            Request</a
-                                                        >
+                                                    <td class="text-center">
+                                                        Internal Medicine
                                                     </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>APT0008</td>
-                                                    <td>
+                                                    <td class="text-center">
+                                                        2870 University Street,
+                                                        United States
+                                                    </td>
+                                                    <td class="text-center">
+                                                        (680) 432 2662
+                                                    </td>
+                                                    <td class="text-center">
+                                                        julia@example.com
+                                                    </td>
+                                                    <td class="text-center">
                                                         <a
                                                             href="patients-profile.html"
-                                                            ><img
-                                                                src="assets/img/profiles/avatar-08.jpg"
-                                                                class="
-                                                                    rounded-circle
-                                                                    m-r-5
-                                                                    profile-img
-                                                                "
-                                                                alt=""
-                                                            />Joshua Maurice</a
-                                                        >
-                                                    </td>
-                                                    <td>6 Jan 2020</td>
-                                                    <td>10:00am-12:00am</td>
-                                                    <td class="text-primary">
-                                                        Accepted
-                                                    </td>
-                                                    <td
-                                                        class="
-                                                            text-right
-                                                            d-flex
-                                                        "
-                                                    >
-                                                        <a
-                                                            href="#"
                                                             class="
                                                                 btn
                                                                 btn-sm
                                                                 btn-white
                                                                 text-success
                                                                 mr-2
-                                                                d-flex
                                                             "
                                                             ><i
                                                                 class="
-                                                                    far
-                                                                    fa-edit
+                                                                    fas
+                                                                    fa-eye
                                                                     mr-1
                                                                 "
                                                             ></i>
-                                                            Request</a
-                                                        >
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>APT0009</td>
-                                                    <td>
-                                                        <a
-                                                            href="patients-profile.html"
-                                                            ><img
-                                                                src="assets/img/profiles/avatar-10.jpg"
-                                                                class="
-                                                                    rounded-circle
-                                                                    m-r-5
-                                                                    profile-img
-                                                                "
-                                                                alt=""
-                                                            />
-                                                            Charles Clements</a
-                                                        >
-                                                    </td>
-                                                    <td>15 Dec 2020</td>
-                                                    <td>10:00am-12:00am</td>
-                                                    <td class="text-primary">
-                                                        Accepted
-                                                    </td>
-                                                    <td
-                                                        class="
-                                                            text-right
-                                                            d-flex
-                                                        "
-                                                    >
-                                                        <a
-                                                            href="#"
-                                                            class="
-                                                                btn
-                                                                btn-sm
-                                                                btn-white
-                                                                text-success
-                                                                mr-2
-                                                                d-flex
-                                                            "
-                                                            ><i
-                                                                class="
-                                                                    far
-                                                                    fa-edit
-                                                                    mr-1
-                                                                "
-                                                            ></i>
-                                                            Request</a
+                                                            View</a
                                                         >
                                                     </td>
                                                 </tr>

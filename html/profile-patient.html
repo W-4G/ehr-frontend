@@ -6,7 +6,7 @@
             name="viewport"
             content="width=device-width, initial-scale=1.0, user-scalable=0"
         />
-        <title>EMR - Dashboard</title>
+        <title>EMR - Profile</title>
 
         <!-- Favicon -->
         <link
@@ -82,6 +82,9 @@
                 <!-- /Mobile Menu Toggle -->
                 <!-- Header Right Menu -->
                 <ul class="nav user-menu">
+                    <!-- Flag -->
+
+                    <!-- /Flag -->
                     <!-- Notifications -->
                     <li class="nav-item dropdown">
                         <a href="#" class="nav-link notifications-item">
@@ -89,7 +92,6 @@
                             <span class="badge badge-pill">3</span>
                         </a>
                     </li>
-
                     <!-- /Notifications -->
                     <!-- Chat -->
                     <li class="nav-item dropdown">
@@ -114,10 +116,13 @@
                             ></span>
                         </a>
                         <div class="dropdown-menu">
-                            <a class="dropdown-item" href="profile-doctor.html"
+                            <a class="dropdown-item" href="profile-patient.html"
                                 ><i class="feather-user"></i> My Profile</a
                             >
-                            <a class="dropdown-item" href="settings.html">
+                            <a
+                                class="dropdown-item"
+                                href="settings-patient.html"
+                            >
                                 <i class="feather-settings"></i>Settings
                             </a>
                             <a class="dropdown-item" href="dashboard.html">
@@ -159,7 +164,7 @@
                                     <span>Medical History</span></a
                                 >
                             </li>
-                            <li class="submenu active">
+                            <li class="submenu">
                                 <a href="#"
                                     ><i class="feather-list"></i>
                                     <span>Appointments</span>
@@ -173,9 +178,7 @@
                                         >
                                     </li>
                                     <li>
-                                        <a
-                                            href="appointments-requests.html"
-                                            class="active"
+                                        <a href="appointments-requests.html"
                                             >Request appointments</a
                                         >
                                     </li>
@@ -206,130 +209,322 @@
             <!-- Page Wrapper -->
             <div class="page-wrapper">
                 <div class="content container-fluid">
-                    <!-- Page Header -->
-                    <div class="page-header">
-                        <div class="row align-items-center">
-                            <div class="col-md-12">
-                                <div class="d-flex align-items-center">
-                                    <h5 class="page-title">Dashboard</h5>
-                                    <ul class="breadcrumb ml-2">
-                                        <li class="breadcrumb-item">
-                                            <a href="dashboard-patient.html"
-                                                ><i class="fas fa-home"></i
-                                            ></a>
-                                        </li>
-                                        <li class="breadcrumb-item">
-                                            <a href="index.html">Dashboard</a>
-                                        </li>
-                                        <li class="breadcrumb-item">
-                                            <a href="#">Appointments</a>
-                                        </li>
-                                        <li class="breadcrumb-item active">
-                                            Schedule Appointments
-                                        </li>
-                                    </ul>
+                    <div class="row justify-content-lg-center">
+                        <div class="col-lg-10">
+                            <!-- Page Header -->
+                            <div class="page-header">
+                                <div class="row align-items-center">
+                                    <div class="col-md-12">
+                                        <div class="d-flex align-items-center">
+                                            <h5 class="page-title">
+                                                Dashboard
+                                            </h5>
+                                            <ul class="breadcrumb ml-2">
+                                                <li class="breadcrumb-item">
+                                                    <a href="dashboard.html"
+                                                        ><i
+                                                            class="fas fa-home"
+                                                        ></i
+                                                    ></a>
+                                                </li>
+                                                <li class="breadcrumb-item">
+                                                    <a href="dashboard.html"
+                                                        >Dashboard</a
+                                                    >
+                                                </li>
+                                                <li
+                                                    class="
+                                                        breadcrumb-item
+                                                        active
+                                                    "
+                                                >
+                                                    Profile
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                    <!-- /Page Header -->
+                            <!-- /Page Header -->
 
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <div class="card">
-                                <div class="card-header">
-                                    <h5 class="card-title">Request Form</h5>
-                                </div>
-                                <div class="card-body">
-                                    <form action="#">
-                                        <div class="form-group row">
-                                            <label
-                                                class="col-form-label col-md-2"
-                                                >Speciality</label
-                                            >
-                                            <div class="col-md-10">
-                                                <select class="form-control">
-                                                    <option>
-                                                        General Medicine
-                                                    </option>
-                                                    <option>Option 1</option>
-                                                    <option>Option 2</option>
-                                                    <option>Option 3</option>
-                                                    <option>Option 4</option>
-                                                    <option>Option 5</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                        <div class="form-group row">
-                                            <label
-                                                class="col-form-label col-md-2"
-                                                >Doctor</label
-                                            >
-                                            <div class="col-md-10">
-                                                <select class="form-control">
-                                                    <option>
-                                                        -- Select Doctor--
-                                                    </option>
-                                                    <option>Option 1</option>
-                                                    <option>Option 2</option>
-                                                    <option>Option 3</option>
-                                                    <option>Option 4</option>
-                                                    <option>Option 5</option>
-                                                </select>
-                                            </div>
-                                        </div>
-
-                                        <div class="form-group row">
-                                            <label
-                                                class="col-form-label col-md-2"
-                                                >Reason</label
-                                            >
-                                            <div class="col-md-10">
-                                                <textarea
-                                                    rows="5"
-                                                    cols="5"
-                                                    class="form-control"
-                                                    placeholder="Enter text here"
-                                                ></textarea>
-                                            </div>
-                                        </div>
-
-                                        <div class="form-group mb-0 row">
+                            <div class="row">
+                                <div class="col-12 col-xl-4 d-flex flex-wrap">
+                                    <div class="card">
+                                        <div class="card-body">
                                             <div
-                                                        class="
-                                                            col-md-6
-                                                        "
-                                                    >
-
-                                                    </>
-
-
-                                                    <div
-                                                        class="
-                                                            col-md-6
-                                                        "
-                                                    >
-                                                        <button
-                                                            class="
-                                                                btn btn-primary
-                                                            "
-                                                            type="button"
+                                                class="
+                                                    general-details
+                                                    text-center
+                                                "
+                                            >
+                                                <img
+                                                    src="assets/img/profiles/avatar-18.jpg"
+                                                    class="img-fluid"
+                                                    alt=""
+                                                />
+                                                <h4>Frances Runnels</h4>
+                                                <h6>franc@example.com</h6>
+                                                <a
+                                                    href="settings-patient.html"
+                                                    class="btn-chat"
+                                                    >Edit Profile</a
+                                                >
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-xl-8 d-flex flex-wrap">
+                                    <div class="card">
+                                        <div class="card-body pb-0">
+                                            <div
+                                                class="patient-details d-block"
+                                            >
+                                                <div class="details-list">
+                                                    <div>
+                                                        <h6>External Id</h6>
+                                                        <span class="ml-auto"
+                                                            >PAT0215</span
                                                         >
-                                                            Submit
-                                                        </button>
+                                                    </div>
+                                                    <div>
+                                                        <h6>Date of Birth</h6>
+                                                        <span class="ml-auto"
+                                                            >25/5/1995</span
+                                                        >
+                                                    </div>
+                                                    <div>
+                                                        <h6>Marital Status</h6>
+                                                        <span class="ml-auto"
+                                                            >Married</span
+                                                        >
+                                                    </div>
+                                                    <div>
+                                                        <h6>Sex</h6>
+                                                        <span class="ml-auto"
+                                                            >Male</span
+                                                        >
+                                                    </div>
+                                                    <div>
+                                                        <h6>Address</h6>
+                                                        <span class="ml-auto"
+                                                            >123 High St.</span
+                                                        >
+                                                    </div>
+                                                    <div>
+                                                        <h6>State</h6>
+                                                        <span class="ml-auto"
+                                                            >Wisconsin</span
+                                                        >
+                                                    </div>
+                                                    <div>
+                                                        <h6>Pin Code</h6>
+                                                        <span class="ml-auto"
+                                                            >64004</span
+                                                        >
+                                                    </div>
+                                                    <div>
+                                                        <h6>Country</h6>
+                                                        <span class="ml-auto"
+                                                            >USA</span
+                                                        >
+                                                    </div>
+                                                    <div>
+                                                        <h6>Phone</h6>
+                                                        <span class="ml-auto"
+                                                            >920-345-8746</span
+                                                        >
+                                                    </div>
+                                                    <div>
+                                                        <h6>Relation</h6>
+                                                        <span class="ml-auto"
+                                                            >Father</span
+                                                        >
+                                                    </div>
+                                                    <div>
+                                                        <h6>Contact</h6>
+                                                        <span class="ml-auto"
+                                                            >92-668-2318</span
+                                                        >
+                                                    </div>
+                                                    <div>
+                                                        <h6>Email</h6>
+                                                        <span class="ml-auto"
+                                                            >fran@example.com</span
+                                                        >
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </form>
+                                    </div>
                                 </div>
                             </div>
 
+                            <div class="row">
+                                <div class="col-lg-4">
+                                    <div class="card">
+                                        <div class="card-header">
+                                            <h4 class="card-title float-left">
+                                                Medications
+                                            </h4>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="d-flex mb-4">
+                                                <div class="medicne d-flex">
+                                                    <i class="fas fa-pills"></i>
+                                                    Desmopressin tabs
+                                                </div>
+                                            </div>
+                                            <div class="d-flex mb-4">
+                                                <div class="medicne d-flex">
+                                                    <i
+                                                        class="fas fa-syringe"
+                                                    ></i>
+                                                    Abciximab-injection
+                                                </div>
+                                            </div>
+                                            <div class="d-flex mb-4">
+                                                <div class="medicne d-flex">
+                                                    <i class="fas fa-pills"></i>
+                                                    Kevzara sarilumab
+                                                </div>
+                                            </div>
+                                            <div class="d-flex mb-4">
+                                                <div class="medicne d-flex">
+                                                    <i class="fas fa-pills"></i>
+                                                    Paliperidone palmitate
+                                                </div>
+                                            </div>
+                                            <div class="d-flex mb-4">
+                                                <div class="medicne d-flex">
+                                                    <i
+                                                        class="fas fa-syringe"
+                                                    ></i>
+                                                    Sermorelin-injectable
+                                                </div>
+                                            </div>
+                                            <div class="d-flex mb-4">
+                                                <div class="medicne d-flex">
+                                                    <i
+                                                        class="fas fa-syringe"
+                                                    ></i>
+                                                    Abciximab-injection
+                                                </div>
+                                            </div>
+                                            <div class="d-flex">
+                                                <div class="medicne d-flex">
+                                                    <i class="fas fa-pills"></i>
+                                                    Kevzara sarilumab
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="card">
+                                        <div class="card-header">
+                                            <h4 class="card-title">
+                                                Medical Problems
+                                            </h4>
+                                        </div>
+                                        <div class="card-body">
+                                            <ul class="p-0 med-prb">
+                                                <li>
+                                                    <i
+                                                        class="
+                                                            fas
+                                                            fa-file-medical-alt
+                                                        "
+                                                    ></i>
+                                                    POAG
+                                                </li>
+                                                <li>
+                                                    <i
+                                                        class="
+                                                            fas
+                                                            fa-file-medical-alt
+                                                        "
+                                                    ></i>
+                                                    NS Cataract
+                                                </li>
+                                                <li>
+                                                    <i
+                                                        class="
+                                                            fas
+                                                            fa-file-medical-alt
+                                                        "
+                                                    ></i>
+                                                    SCC
+                                                </li>
+                                                <li>
+                                                    <i
+                                                        class="
+                                                            fas
+                                                            fa-file-medical-alt
+                                                        "
+                                                    ></i>
+                                                    Dermatochalasis
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-4">
+                                    <div class="card">
+                                        <div class="card-header">
+                                            <h4 class="card-title">
+                                                Allergies
+                                            </h4>
+                                        </div>
+                                        <div class="card-body">
+                                            <ul class="p-0 med-prb">
+                                                <li>
+                                                    <i
+                                                        class="
+                                                            fas
+                                                            fa-file-medical-alt
+                                                        "
+                                                    ></i>
+                                                    Sulfa
+                                                </li>
+                                                <li>
+                                                    <i
+                                                        class="
+                                                            fas
+                                                            fa-file-medical-alt
+                                                        "
+                                                    ></i>
+                                                    Codeine
+                                                </li>
+                                                <li>
+                                                    <i
+                                                        class="
+                                                            fas
+                                                            fa-file-medical-alt
+                                                        "
+                                                    ></i>
+                                                    Iodine
+                                                </li>
+                                                <li>
+                                                    <i
+                                                        class="
+                                                            fas
+                                                            fa-file-medical-alt
+                                                        "
+                                                    ></i>
+                                                    Penicillin
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
             <!-- /Page Wrapper -->
+
             <!-- Notification -->
             <div class="notifications">
                 <div class="topnav-dropdown-header">
